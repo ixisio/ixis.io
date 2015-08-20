@@ -8,7 +8,8 @@ var plugins = {
         browserSync: require('browser-sync'),
         cssmin: require('gulp-cssmin'),
         rename: require('gulp-rename'),
-        sass: require('gulp-sass')
+        sass: require('gulp-sass'),
+        uglify: require('gulp-uglify')
     };
 
 /**
@@ -32,11 +33,33 @@ gulp.task('sass', function () {
         .pipe(plugins.browserSync.stream());
 });
 
+gulp.task('sass:deploy', function () {
+    gulp.src('./main.scss')
+        .pipe(plugins.sass({errLogToConsole: true}))
+        .pipe(gulp.dest('./www/assets/css/'))
+        .pipe(plugins.autoprefixer({
+            browsers: ['last 2 versions', 'ios 6'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('./www/assets/css/'))
+        .pipe(plugins.browserSync.stream())
+        .pipe(plugins.cssmin())
+        .pipe(gulp.dest('./www/assets/css/'));
+});
+
 gulp.task('browserify', function() {
     gulp.src('./main.js')
         .pipe(plugins.browserify())
         .pipe(gulp.dest('./www/assets/js/'))
         .pipe(plugins.browserSync.stream());
+});
+
+gulp.task('browserify:deploy', function() {
+    gulp.src('./main.js')
+        .pipe(plugins.browserify())
+        .pipe(gulp.dest('./www/assets/js/'))
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest('./www/assets/js/'));
 });
 
 gulp.task('convert-normalize.css-to-scss', function() {
@@ -53,12 +76,6 @@ gulp.task('watch', function () {
     gulp.watch(['./main.scss', './**/_*/*.scss'], ['sass']);
 });
 
-gulp.task('cssmin', function () {
-    gulp.src('./www/*.css')
-        .pipe(plugins.cssmin())
-        .pipe(gulp.dest('./www/'));
-});
-
 gulp.task('dev', [
     'convert-normalize.css-to-scss',
     'sass',
@@ -67,9 +84,8 @@ gulp.task('dev', [
     'watch'
 ]);
 
-gulp.task('build', [
+gulp.task('deploy', [
     'convert-normalize.css-to-scss',
-    'sass',
-    'cssmin',
-    'browserify'
+    'sass:deploy',
+    'browserify:deploy'
 ]);
