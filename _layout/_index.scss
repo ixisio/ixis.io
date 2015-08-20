@@ -1,0 +1,30 @@
+/**
+ * max-width all elements
+ * block elements.
+ */
+// h1, h2, h3,
+// p,
+// blockquote,
+// figure,
+// ol, ul,
+// pre, code,
+// figure {
+//     max-width: 680px;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+//
+
+.layout__section {
+    @include layoutFor('<small') {
+        padding: 1rem 0.5rem;
+    }
+
+    @include layoutFor('>small','<medium') {
+        padding: 2rem 1rem;
+    }
+
+    @include layoutFor('>medium') {
+        padding: 3rem 2rem;
+    }
+}

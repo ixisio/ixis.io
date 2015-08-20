@@ -1,0 +1,36 @@
+/**
+ * COLORS
+ */
+$color--green: #709c84;
+$color--green-light: #54b69b;
+$color--orange: #e77249;
+$color--grey: #aaa;
+$color--white: #fff;
+$color--black: #2e2e2e;
+
+$color--caption: #bbc8cc;
+$color--code-bg: #f5f4f2;
+$color--text: lighten($color--black, 3%);
+$color--links: $color--green-light;
+$color--headings: $color--black;
+$color--ci: $color--green-light;
+
+/**
+* Typefaces & Sizes
+*/
+$type--root-font-size: 18px;
+$type--root-font-size--small: 14px;
+$type--root-font-size--large: $type--root-font-size * 1.25;
+
+$type--body: (
+    font-family: ("merriweather",serif),
+    regular: 100,
+    bold: 700,
+    italic: italic
+);
+
+$type--heading: (
+    font-family: ("merriweather",serif),
+    regular: 400,
+    bold: 700
+);

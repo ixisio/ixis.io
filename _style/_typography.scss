@@ -1,0 +1,47 @@
+/**
+ * Body Font
+ */
+html {
+    font-size: $type--root-font-size;
+    color: $color--text;
+    font-family: map-get($type--body, font-family);
+    font-weight: map-get($type--body, regular);
+
+    @include layoutFor('<medium') {
+        font-size: $type--root-font-size--small;
+    }
+}
+
+
+
+/**
+ * Paragraphs
+ */
+p {
+    margin-bottom: 1rem;
+}
+
+/**
+ * Headlines
+ */
+[class*="text"] {
+    color: $color--headings;
+}
+
+.typography--type-1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: map-get($type--heading, font-family);
+}
+
+.typography--type-2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    font-family: map-get($type--heading, font-family);
+}
+
+.typography--type-3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: map-get($type--heading, font-family);
+}

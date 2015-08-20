@@ -1,0 +1,17 @@
+/**
+ * Image Basic Styling
+ */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/**
+ * Figures & Images
+ */
+.module__figure--rounded {
+    display: block;
+    border-radius: 100%;
+    margin: 0 auto;
+    width: 250px;
+}

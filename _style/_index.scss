@@ -1,0 +1,14 @@
+// Use border-box sizing for every element and pseudo-element
+// on the page.
+*,
+*:after,
+*:before  {
+    box-sizing: border-box;
+}
+@import 'fonts';
+@import 'buttons';
+@import 'colors';
+@import 'figures';
+@import 'lists';
+@import 'typography';
+
