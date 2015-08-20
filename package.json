@@ -8,14 +8,14 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:ixisio/ixis.io.git"
+    "url": "https://bitbucket.org/ixisio/ixis.io.git"
   },
   "keywords": [
     "blog",
     "website"
   ],
   "bugs": {
-    "url": "https://github.com/ixisio/ixis.io/issues"
+    "url": "https://bitbucket.org/ixisio/ixis.io/issues"
   },
   "devDependencies": {
     "browser-sync": "^2.8.2",
