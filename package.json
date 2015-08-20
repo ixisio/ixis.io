@@ -17,6 +17,9 @@
   "bugs": {
     "url": "https://bitbucket.org/ixisio/ixis.io/issues"
   },
+  "engines": {
+    "node" : "0.10.32"
+  },
   "scripts": {
     "deploy": "gulp deploy",
     "postinstall": "npm run deploy"
