@@ -21,8 +21,7 @@
     "node" : "0.10.32"
   },
   "scripts": {
-    "deploy": "gulp deploy",
-    "postinstall": "npm run deploy"
+    "postinstall": "node_modules/gulp/bin/gulp.js deploy"
   },
   "devDependencies": {
     "browser-sync": "latest",
