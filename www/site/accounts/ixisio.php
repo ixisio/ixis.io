@@ -8,3 +8,5 @@ language: en
 role: admin
 firstname: Andreas
 lastname: Klein
+history:
+  - home
