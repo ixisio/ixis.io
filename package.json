@@ -34,7 +34,6 @@
     "gulp-uglify": "^1.2.0"
   },
   "dependencies": {
-    "@ixisio/hill": "^0.1.0",
     "fastclick": "^1.0.6",
     "jquery": "^2.1.4",
     "normalize.css": "^3.0.3",
