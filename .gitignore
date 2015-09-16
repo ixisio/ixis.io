@@ -1,2 +1,4 @@
 node_modules
-*.css
+
+www/assets/js/
+www/assets/css/

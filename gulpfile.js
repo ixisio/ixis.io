@@ -42,7 +42,6 @@ gulp.task('sass:deploy', function () {
             cascade: false
         }))
         .pipe(gulp.dest('./www/assets/css/'))
-        .pipe(plugins.browserSync.stream())
         .pipe(plugins.cssmin())
         .pipe(gulp.dest('./www/assets/css/'));
 });
