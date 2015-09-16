@@ -31,7 +31,7 @@
     "gulp-cssmin": "latest",
     "gulp-rename": "latest",
     "gulp-sass": "latest",
-    "gulp-uglify": "^1.2.0"
+    "gulp-uglify": "latest"
   },
   "dependencies": {
     "fastclick": "^1.0.6",
