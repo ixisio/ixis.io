@@ -1,0 +1,6 @@
+{
+  "name": "ixis-io",
+  "root": "www",
+  "clean_urls": true,
+  "error_page": "error.html"
+}
