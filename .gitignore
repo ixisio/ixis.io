@@ -2,3 +2,4 @@ node_modules
 
 www/assets/js/
 www/assets/css/
+www/*.html

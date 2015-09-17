@@ -7,6 +7,7 @@ var plugins = {
         browserify: require('gulp-browserify'),
         browserSync: require('browser-sync'),
         cssmin: require('gulp-cssmin'),
+        fileinclude: require('gulp-file-include'),
         rename: require('gulp-rename'),
         sass: require('gulp-sass'),
         uglify: require('gulp-uglify')
@@ -62,17 +63,34 @@ gulp.task('browserify:deploy', function() {
 });
 
 gulp.task('convert-normalize.css-to-scss', function() {
-  return gulp.src(['node_modules/normalize.css/normalize.css'])
+    return gulp.src(['node_modules/normalize.css/normalize.css'])
             .pipe(plugins.rename('_normalize.scss'))
             .pipe(gulp.dest('node_modules/normalize.css/'));
 });
 
-gulp.task('watch', function () {
-    gulp.watch(['./www/**/*.php', './www/**/*.txt'])
-        .on('change', plugins.browserSync.reload);
+gulp.task('templates', function() {
+    gulp.src(['./_templates/*.html'])
+        .pipe(plugins.fileinclude({
+            prefix: '@@',
+            basepath: './'
+        }))
+        .pipe(gulp.dest('./www/'))
+        .pipe(plugins.browserSync.stream());
+});
 
+gulp.task('templates:deploy', function() {
+    gulp.src(['./_templates/*.html'])
+        .pipe(plugins.fileinclude({
+            prefix: '@@',
+            basepath: './'
+        }))
+        .pipe(gulp.dest('./www/'));
+});
+
+gulp.task('watch', function () {
     gulp.watch(['./main.js', './**/_*/*.js'], ['browserify']);
     gulp.watch(['./main.scss', './**/_*/*.scss'], ['sass']);
+    gulp.watch(['./www/**/*.html', './**/_*/*.html'], ['templates']);
 });
 
 gulp.task('dev', [
@@ -80,11 +98,13 @@ gulp.task('dev', [
     'sass',
     'browserify',
     'browsersync',
+    'templates',
     'watch'
 ]);
 
 gulp.task('deploy', [
     'convert-normalize.css-to-scss',
     'sass:deploy',
-    'browserify:deploy'
+    'browserify:deploy',
+    'templates:deploy',
 ]);

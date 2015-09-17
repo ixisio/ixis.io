@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('_layout/_head.html', { "title": "" })
+</head>
+<body>
+    @@include('_modules/_navigation/_navigation.html')
+
+    <main>
+        <section>
+            <div class="hero" hill-layout="clearfix">
+                <div class="hero__col">
+                    <div class="layout__section__background">
+                        <img srcset="assets/images/home/ixis.io__background-video__gestaltanahme__01.png 1x, assets/images/home/ixis.io__background-video__gestaltanahme__01.png 2x" alt="Andreas Klein is working in his office">
+                    </div>
+                    <div class="layout__section hero__text">
+                        <h1 class="typography--type-2">
+                            <i>ixis.io</i> - Andreas Klein, Cologne/Germany.<span class="color--grey"> I create accessible User Interfaces, help Teams to improve their Workflows and build large scale Frontend Architectures.</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="layout__section">
+            <p>Some Text</p>
+        </section>
+    </main>
+
+    @@include('_layout/_footer.html')
+</body>
+</html>
