@@ -18,12 +18,12 @@ $menu-items: 3;
     border-radius: 100%;
     color: white;
     text-align: center;
-    transform: translate3d(0,0,0);
-    transition: transform,background ease-out 200ms;
+    transform: scale(1, 1) translate3d(0,0,0);
+    transition: transform ease-out 200ms;
     line-height: 2rem;
 
     &:hover {
-        background-color: $color--caption;
+        transform: scale(1.2,1.2) translate3d(0,0,0);
     }
 }
 
@@ -34,7 +34,14 @@ $menu-items: 3;
 .navigation {
     position: fixed;
     left: 1rem;
-    top: 1rem;
+
+    @include layoutFor('>medium') {
+        top: 1rem;
+    }
+
+    @include layoutFor('<medium') {
+        bottom: 4rem;
+    }
 
     * {
         user-select: none;
@@ -73,17 +80,38 @@ $menu-items: 3;
 
         &:nth-child(#{1}) {
             transition-duration: 150ms;
-            transform: translate3d(50px, -15px, 0);
+
+            @include layoutFor('>medium') {
+                transform: translate3d(50px, -15px, 0);
+            }
+
+            @include layoutFor('<medium') {
+                transform: translate3d(-8px, -55px, 0);
+            }
         }
 
         &:nth-child(#{2}) {
             transition-duration: 250ms;
-            transform: translate3d(40px, 35px, 0);
+
+            @include layoutFor('>medium') {
+                transform: translate3d(40px, 35px, 0);
+            }
+
+            @include layoutFor('<medium') {
+                transform: translate3d(42px, -40px, 0);
+            }
         }
 
         &:nth-child(#{3}) {
             transition-duration: 350ms;
-            transform: translate3d(-5px, 55px, 0);
+
+            @include layoutFor('>medium') {
+                transform: translate3d(-5px, 55px, 0);
+            }
+
+            @include layoutFor('<medium') {
+                transform: translate3d(55px, 10px, 0);
+            }
         }
     }
 }
@@ -109,7 +137,7 @@ $menu-items: 3;
     cursor: pointer;
 
     &:hover {
-        transform:scale(1.2,1.2) translate3d(0,0,0);
+        transform: scale(1.2,1.2) translate3d(0,0,0);
     }
 }
 
