@@ -1,4 +1,5 @@
 node_modules
+.divshot-cache
 
 www/assets/js/
 www/assets/css/
