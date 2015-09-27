@@ -21,13 +21,16 @@ p {
     margin-bottom: 1rem;
 }
 
-/**
- * Headlines
- */
-[class*="text"] {
+h1,
+h2,
+h3
+blockquote {
     color: $color--headings;
 }
 
+/**
+ * Headlines
+ */
 .typography--type-1 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -37,11 +40,22 @@ p {
 .typography--type-2 {
     font-size: 2.5rem;
     margin-bottom: 0.75rem;
+    margin-top: 2rem;
     font-family: map-get($type--heading, font-family);
 }
 
 .typography--type-3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    margin-top: 2rem;
     font-family: map-get($type--heading, font-family);
 }
+
+/**
+ * Other Elements
+ */
+hr {
+    border: none;
+    border-top: 1px solid $color--grey-light;
+}
+

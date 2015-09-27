@@ -5,6 +5,7 @@ $color--green: #709c84;
 $color--green-light: #54b69b;
 $color--orange: #e77249;
 $color--grey: #aaa;
+$color--grey-light: lighten($color--grey, 10);
 $color--white: #fff;
 $color--black: #2e2e2e;
 
@@ -34,3 +35,9 @@ $type--heading: (
     regular: 400,
     bold: 700
 );
+
+/**
+ * Layouting
+ */
+
+$layout--max-width: 600px;

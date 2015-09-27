@@ -1,3 +1,6 @@
+/**
+ * Text Colors
+ */
 .color--green {
     color: $color--green;
 }
@@ -16,7 +19,13 @@
 .color--grey {
     color: $color--grey;
 }
+.color--grey-light {
+    color: $color--grey-light;
+}
 
+/**
+ * Background Colors
+ */
 .background--green {
     background-color: $color--green;
     color: #fff;
@@ -34,4 +43,10 @@
 }
 .background--black {
     background-color: $color--black;
+}
+.background--grey {
+    background-color: $color--grey;
+}
+.background--grey-light {
+    background-color: $color--grey-light;
 }

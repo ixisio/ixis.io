@@ -8,7 +8,9 @@ var plugins = {
         browserSync: require('browser-sync'),
         cssmin: require('gulp-cssmin'),
         fileinclude: require('gulp-file-include'),
+        imagemin: require('gulp-imagemin'),
         rename: require('gulp-rename'),
+        pngquant: require('imagemin-pngquant'),
         sass: require('gulp-sass'),
         uglify: require('gulp-uglify')
     };
@@ -87,10 +89,23 @@ gulp.task('templates:deploy', function() {
         .pipe(gulp.dest('./www/'));
 });
 
+gulp.task('images', function () {
+    gulp.src('_assets/images/**/*')
+        .pipe(plugins.imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            use: [plugins.pngquant()]
+        }))
+        .pipe(gulp.dest('www/assets/images'));
+})
+
 gulp.task('watch', function () {
     gulp.watch(['./main.js', './**/_*/*.js'], ['browserify']);
     gulp.watch(['./main.scss', './**/_*/*.scss'], ['sass']);
     gulp.watch(['./www/**/*.html', './**/_*/*.html'], ['templates']);
+    gulp.watch(['./www/assets/images/**/_*/*'], ['images']);
 });
 
 gulp.task('dev', [
@@ -99,6 +114,7 @@ gulp.task('dev', [
     'browserify',
     'browsersync',
     'templates',
+    'images',
     'watch'
 ]);
 
