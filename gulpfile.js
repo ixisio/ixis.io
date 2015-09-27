@@ -123,4 +123,5 @@ gulp.task('deploy', [
     'sass:deploy',
     'browserify:deploy',
     'templates:deploy',
+    'images'
 ]);
