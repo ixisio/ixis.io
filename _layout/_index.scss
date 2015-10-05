@@ -16,7 +16,6 @@ hr,
     margin-right: auto;
 }
 
-
 .layout__section {
     @include layoutFor('<small') {
         padding: 1rem 0.5rem;
@@ -30,3 +29,17 @@ hr,
         padding: 3rem 2rem;
     }
 }
+
+.layout__header {
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+}
+
+.layout__logo {
+    position: absolute;
+    right: 2rem;
+    width: 6rem;
+    display: block;
+}
+

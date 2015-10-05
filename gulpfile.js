@@ -20,7 +20,9 @@ var plugins = {
  */
 gulp.task('browsersync', function() {
     plugins.browserSync({
-        proxy: 'ixisio.dev'
+        server: {
+            baseDir: "./www/"
+        }
     });
 });
 
