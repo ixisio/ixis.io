@@ -98,7 +98,6 @@ address,
     left: 50%;
     width: 2.25rem;
     margin-left: -1,125rem;
-    color: get-color(black);
 
     opacity: 0.4;
     transition: transform .4s, opacity .4s;
@@ -121,7 +120,6 @@ address,
 }
 
 .layout__logo {
-    position: absolute;
     width: 6rem;
     display: block;
     z-index: 1;

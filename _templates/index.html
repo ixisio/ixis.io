@@ -5,7 +5,7 @@
 </head>
 <body>
     <header class="layout__header">
-        @@include('_layout/_logo.html')
+        @@include('_layout/_logo.html', {"header": true, "color": "white", "linked": false})
 
         <div class="layout__header__image">
             <img src="assets/images/home/9776__1200x800.jpg"
@@ -15,10 +15,8 @@
                          assets/images/home/9776__960x1211.jpg 767w,
                          assets/images/home/9776__480x606.jpg 480w">
 
-            <a href="#section-intro" class="layout__section__scroll-button" title="Scroll to next section">
-                <svg viewBox="0 0 24 24" class="icon icon--large">
-                    <use xlink:href="assets/svg/sprite.symbol.svg#arrow-down"></use>
-                </svg>
+            <a href="#section-intro" class="layout__section__scroll-button" title="Scroll to next section" iii-color="black">
+                @@include('_modules/_icons/_icons.html', { "name": "arrow-down", "inline": false, "size": "large", "attr": "" })
             </a>
         </div>
     </header>
@@ -29,13 +27,14 @@
                 <h1 class="typography--type-2">Hey, I'm Andreas Klein.<span iii-color="grey"> I create accessible and intuitive User Interfaces, help Teams to improve their Workflows and build large scale Frontend Architectures.</span>
                 </h1>
                 <p hill-text="center">
-                    <a href="#availability" class="typography--link" hill-layout="space-right" iii-color="grey">Check Availability</a>
+                    <a href="#availability" class="typography--link--icon" hill-layout="space-right" iii-color="grey">
+                        @@include('_modules/_icons/_icons.html', { "name": "calendar", "inline": true, "size": "small", "attr": "" })Check Availability</a>
                     <a href="mailto:andy@ixis.io" class="button" iii-bgcolor="blue">Hire me</a>
                 </p>
             </div>
         </section>
 
-        <section id="testimonials">
+        <section id="testimonials" iii-bgcolor="blue">
             <section class="layout__text-wrapper layout__space-top">
                 <h2 class="typography--type-3 layout__section__headline" hill-text="center">What my Friends and Customers say</h2>
             </section>
@@ -56,6 +55,29 @@
                                     <img src="assets/images/testimonials/steffen-doell.jpg" alt="Steffen Döll" class="testimonial__image">
                                     <p class="testimonials__author">Steffen Döll</p>
                                     Kuehlhaus AG
+                                </a>
+                            </cite>
+                        </footer>
+                    </blockquote>
+                </section>
+
+                <section class="layout__section">
+                    <blockquote class="testimonials__entry">
+                        <div class="testimonials__quote">
+                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
+                        </div>
+                        <div class="testimonials__text">
+                             <p>Andy ist gut!<br>
+                             Subjekt, Prädikat, Objekt.<br>
+                             Kürzer geht nicht :)</p>
+                        </div>
+
+                        <footer class="testimonials__footer">
+                            <cite class="testimonials__cite">
+                                <a href="http://tomascaspers.de/" target="blank" class="typography--link">
+                                    <img src="assets/images/testimonials/tomas-caspers.jpg" alt="Tomas Caspers" class="testimonial__image">
+                                    <p class="testimonials__author">Tomas Caspers</p>
+                                    Accenture Digital Interactive
                                 </a>
                             </cite>
                         </footer>
@@ -95,6 +117,7 @@
                         <footer class="testimonials__footer">
                             <cite class="testimonials__cite">
                                 <a href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" target="blank" class="typography--link">
+                                    <img src="assets/images/testimonials/markus-besenfelder.jpg" alt="Markus Besenfelder" class="testimonial__image">
                                     <p class="testimonials__author">Markus Besenfelder</p>
                                     Stadt Hamburg
                                 </a>
@@ -123,34 +146,87 @@
                         </footer>
                     </blockquote>
                 </section>
+
+                <section class="layout__section">
+                    <blockquote class="testimonials__entry">
+                        <div class="testimonials__quote">
+                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
+                        </div>
+                        <div class="testimonials__text">
+                             <p>Andreas ist fokussiert, engagiert und diszipliniert. Sein Wissensdurst und sein Hunger nach Weiterentwicklung, kombiniert mit dem Willen, im Team wirklich Großartiges zu erreichen, machen aus ihm den perfekten Mitstreiter, Diskussionspartner und Kollegen. Uneingeschränkt empfehlenswert.</p>
+                        </div>
+
+                        <footer class="testimonials__footer">
+                            <cite class="testimonials__cite">
+                                <a href="http://nitzsche.info/" target="blank" class="typography--link">
+                                    <img src="assets/images/testimonials/stefan-nitzsche.jpg" alt="Stefan Nitzsche" class="testimonial__image">
+                                    <p class="testimonials__author">Stefan Nitzsche</p>
+                                    Freelance Designer &amp; Consultant
+                                </a>
+                            </cite>
+                        </footer>
+                    </blockquote>
+                </section>
             </div>
 
             <section class="layout__text-wrapper layout__space-bottom" data-slider-mobile-more="testimonials">
                 <p hill-text="center">
-                    <a class="typography--link" iii-color="grey">
-                        <svg viewBox="0 0 24 24" class="icon icon--inline icon--small">
-                            <use xlink:href="assets/svg/sprite.symbol.svg#arrow-down"></use>
-                        </svg>See more Testimonials
+                    <a class="typography--link--icon" iii-color="grey">
+                        @@include('_modules/_icons/_icons.html', { "name": "arrow-down", "inline": true, "size": "small", "attr": "" })See more Testimonials
                     </a>
                 </p>
             </section>
         </section>
 
-        <section id="clients" class="layout__section">
-            <ul>
-                <li>Vaillant</li>
-                <li>Shareacamper</li>
-                <li>MPS Solutions</li>
-                <li>Aktion Mensch</li>
-                <li>Stadt Hamburg</li>
-                <li></li>
+        <section id="clients" class="layout__section" hill-text="center">
+
+            <h2 class="typography--type-3 layout__section__headline">
+            My Clients</h2>
+
+            <ul class="list--inline clients">
+                <li class="clients__entry">
+                    <a href="http://vaillant-group.com" title="Vaillant Group" target="blank">
+                        <img src="assets/images/clients/vaillant-group.png" alt="Vaillant Group Logo">
+                    </a>
+                </li>
+                <li class="clients__entry">
+                    <a href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" title="Stadt Hamburg" target="blank">
+                        <img src="assets/images/clients/stadt-hamburg.png" alt="Stadt Hamburg Logo">
+                    </a>
+                </li>
+                <li class="clients__entry">
+                    <a href="http://vaillant.com" title="Vaillant" target="blank">
+                        <img src="assets/images/clients/vaillant.png" alt="Vaillant Logo">
+                    </a>
+                </li>
+                <li class="clients__entry">
+                    <a href="http://aktion-mensch.de" title="Aktion Mensch" target="blank">
+                        <img src="assets/images/clients/aktion-mensch.png" alt="Aktion Mensch Logo">
+                    </a>
+                </li>
+                <li class="clients__entry">
+                    <a href="http://shareacamper.co.nz" title="Shareacamper" target="blank">
+                        <img src="assets/images/clients/shareacamper.png" alt="Shareacamper Logo">
+                    </a>
+                </li>
+                <li class="clients__entry">
+                    <a href="https://lightweight.info" title="Lightweight" target="blank">
+                        <img src="assets/images/clients/lightweight.png" alt="Lightweight Logo">
+                    </a>
+                </li>
+                <li class="clients__entry">
+                    <a href="http://www.mps-solutions.de/" title="MPS Public Solutions" target="blank">
+                        <img src="assets/images/clients/mps.png" alt="MPS Public Solutions Logo">
+                    </a>
+                </li>
             </ul>
         </section>
 
-        <section id="availability" class="layout__section" iii-bgcolor="grey">
+        <section id="availability" class="layout__section" iii-bgcolor="red">
             <h2 class="typography--type-3 layout__section__headline" hill-text="center">
             Availability</h2>
-            <p hill-text="center">I'm working on a project right now until <b>March 2016</b>.</p>
+
+            <p hill-text="center"><del>I'm available from 01.01.2016</del> I'm working on a project until <b>March 2016</b>.</p>
             <p hill-text="center">You need me as a Consultant or want me to speak on your Event? Let's have <a class="typography--link" href="tel:+491738888987">Call</a> or meet me in Person:</p>
             <address hill-text="center">
                 <a href="http://bit.ly/1WRT82k" class="typography--no-link typography--link--icon" target="blank">

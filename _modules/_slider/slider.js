@@ -42,9 +42,10 @@ $('[data-slider-mobile-more]').each(function () {
     var $slider = $('[data-slider="' + sliderId +'"');
 
     // Add EventListerner and enable FastClick on Nav Button
-    FastClick($this[0]);
+    // FastClick($this[0]);
 
-    $this.one('click', function () {
+    $this.on('click', function () {
+        alert('test');
         $slider.addClass('is--opened');
         $this.remove();
     });

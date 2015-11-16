@@ -85,17 +85,14 @@ h3 {
 }
 
 .typography--link--icon {
-    svg {
-        transition: transform .3s;
-    }
+    display: inline-block;
+    text-decoration: none;
+    transition: transform .3s;
 
     &:hover,
     &:focus {
         text-decoration: none;
-
-        svg {
-            transform: scale(1.2);
-        }
+        transform: scale(1.05);
     }
 }
 
