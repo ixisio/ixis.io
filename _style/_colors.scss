@@ -1,52 +1,25 @@
 /**
- * Text Colors
+ * Create HTML Attributes to set color, background-color
+ * to each Element on the site.
  */
-.color--green {
-    color: $color--green;
-}
-.color--green-light {
-    color: $color--green-light;
-}
-.color--orange {
-    color: $color--orange;
-}
-.color--white {
-    color: $color--white;
-}
-.color--black {
-    color: $color--black;
-}
-.color--grey {
-    color: $color--grey;
-}
-.color--grey-light {
-    color: $color--grey-light;
-}
+@each $color in $colors {
+    $color-name: nth($color, 1);
+    $color-hex: get-color($color-name);
+    $color-type: get-color-type($color-name);
 
-/**
- * Background Colors
- */
-.background--green {
-    background-color: $color--green;
-    color: #fff;
-}
-.background--green-light {
-    background-color: $color--green-light;
-    color: #fff;
-}
-.background--orange {
-    background-color: $color--orange;
-    color: #fff;
-}
-.background--white {
-    background-color: $color--white;
-}
-.background--black {
-    background-color: $color--black;
-}
-.background--grey {
-    background-color: $color--grey;
-}
-.background--grey-light {
-    background-color: $color--grey-light;
+    [iii-color="#{$color-name}"] {
+        color: $color-hex;
+        fill: $color-hex;
+    };
+
+    [iii-bgcolor="#{$color-name}"] {
+        background-color: $color-hex;
+
+        @if $color-type == dark {
+            &,
+            [class*="typography--"] {
+                color: get-color(white);
+            }
+        }
+    };
 }

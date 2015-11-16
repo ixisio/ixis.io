@@ -151,7 +151,7 @@ $menu-items: 3;
 
     width: $width;
     height: $height;
-    background: $color--white;
+    background: get-color(white);
     display:block;
     position:absolute;
     top:50%;

@@ -2,14 +2,13 @@
  * Buttons
  * (Dam, I hate button styling :)
  */
-
-%button {
+.button {
     position: relative;
     display: inline-block;
 
     padding: .8em 1em .75em;
     border-radius: 1px;
-    border: none;
+    border: 0;
 
     font-weight: bold;
     letter-spacing: .15rem;
@@ -18,7 +17,7 @@
     text-align: center;
     white-space: nowrap;
 
-    transition: all .3s;
+    transition: transform .3s;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
 
@@ -27,22 +26,17 @@
         background-image: none;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         text-decoration: none;
+        transform: scale(1.05);
     }
-}
 
-@mixin button($color: $color--white, $border: $color--ci, $bg: $color--ci) {
-    @extend %button;
-
-    color: $color;
-    background-color: $bg;
-
-    &:hover, &:focus {
-        background-color: darken($bg, 10%);
+    &[disabled],
+    &:disabled {
+        cursor: not-allowed;
+        color: get-color(white);
+        background-color: get-color(grey-light);
+        transform: none;
     }
-}
-
-.module__button {
-    @include button();
 }

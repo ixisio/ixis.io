@@ -3,13 +3,25 @@
  */
 img {
     max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 /**
  * Figures & Images
  */
-.module__figure--rounded {
+[class*="figure"] {
+    figcaption {
+        padding: 0.5rem 0;
+    }
+}
+
+.figure--full-width {
+    max-width: none;
+    margin: 0;
+}
+
+.figure--rounded {
     display: block;
     border-radius: 100%;
     margin: 0 auto;

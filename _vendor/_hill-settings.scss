@@ -1,5 +1,13 @@
 /**
  * Hill Settings
  */
-$hill-layout-space:  3rem;
-$hill-layout-widths: (25, 34, 50, 66, 75, 100);
+$hill-layout-space:                 1rem;
+$hill-layout-widths:                (25, 33.3, 40, 50, 60, 66, 75, 100);
+$hill-layout-breakpoint-helpers:    true;
+
+// Order is important for MQ specifity
+$hill-layout-breakpoints: (
+    large:  992px,
+    medium: 768px,
+    small:  480px
+);

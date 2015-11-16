@@ -3,7 +3,7 @@
  */
 html {
     font-size: $type--root-font-size;
-    color: $color--text;
+    color: get-color(grey-dark);
     font-family: map-get($type--body, font-family);
     font-weight: map-get($type--body, regular);
 
@@ -12,8 +12,6 @@ html {
     }
 }
 
-
-
 /**
  * Paragraphs
  */
@@ -21,27 +19,46 @@ p {
     margin-bottom: 1rem;
 }
 
-h1,
-h2,
-h3
-blockquote {
-    color: $color--headings;
+[class*="typography--"]{
+    font-weight: map-get($type--body, regular);
+    color: get-color(black);
+
+    @include layoutFor('<small') {
+        word-wrap: break-word;
+    }
 }
 
 /**
  * Headlines
  */
+
+// Overwrite User-Agent Styles
+h1,
+h2,
+h3 {
+   font-weight: map-get($type--body, regular);
+}
+
 .typography--type-1 {
     font-size: 4rem;
     margin-bottom: 1rem;
     font-family: map-get($type--heading, font-family);
+
+    @include layoutFor('<small') {
+        font-size: 2rem;
+    }
 }
 
 .typography--type-2 {
     font-size: 2.5rem;
-    margin-bottom: 0.75rem;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
     font-family: map-get($type--heading, font-family);
+
+    @include layoutFor('<small') {
+        font-size: 1.75rem;
+        margin-top: 0;
+    }
 }
 
 .typography--type-3 {
@@ -52,10 +69,69 @@ blockquote {
 }
 
 /**
+ * Links
+ */
+.typography--link {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    svg {
+        transition: transform .3s;
+    }
+}
+
+.typography--link--icon {
+    svg {
+        transition: transform .3s;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+        svg {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.typography--no-link {
+    text-decoration: none;
+}
+
+/**
  * Other Elements
  */
 hr {
     border: none;
-    border-top: 1px solid $color--grey-light;
+    border-top: 1px solid get-color(grey-light);
 }
 
+/**
+ * Quotation
+ */
+.typography--blockquote {
+    font-size: 1.25rem;
+    font-family: map-get($type--heading, font-family);
+    padding: 1rem 0 1.5rem 0;
+    margin: 0.5rem 2rem 0 0;
+    border-top: 5px solid get-color(black);
+
+    @include layoutFor('<small') {
+        border: none;
+    }
+
+    cite {
+        font-size: 1rem;
+    }
+}
+
+p q,
+cite {
+    font-style: italic;
+    font-weight: 100;
+}

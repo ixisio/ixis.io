@@ -17,37 +17,48 @@
                     <h2>Table of Contents</h2>
                     <ul class="list">
                         <li>
-                            <a href="#typography">Typography</a>
+                            <a class="typography--link" href="#color">Colors</a>
                             <ol class="list">
                                 <li>
-                                    <a href="#headlines">Headlines</a>
+                                    <a class="typography--link" href="#text-color">Text Colors</a>
                                 </li>
                                 <li>
-                                    <a href="#paragraphs">Paragraphs</a>
-                                </li>
-                                <li>
-                                    <a href="#other-text-elements">Other Text Elements</a>
-                                </li>
-                                <li>
-                                    <a href="#lists">List Types</a>
-                                </li>
-                                <li>
-                                    <a href="#code">Code Blocks</a>
-                                </li>
-                                <li>
-                                    <a href="#buttons">Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="#quotation">Quotation</a>
+                                    <a class="typography--link" href="#bg-color">Background Colors</a>
                                 </li>
                             </ol>
                         </li>
                         <li>
-                            <a href="#figures">Figures</a>
+                            <a class="typography--link" href="#typography">Typography</a>
                             <ol class="list">
-                                <li><a href="#default-figures">Figure default</a></li>
-                                <li><a href="#figures-with-caption">Figure w/ Caption</a></li>
-                                <li><a href="#figures-full-width">Figure full-width</a></li>
+                                <li>
+                                    <a class="typography--link" href="#headlines">Headlines</a>
+                                </li>
+                                <li>
+                                    <a class="typography--link" href="#paragraphs">Paragraphs</a>
+                                </li>
+                                <li>
+                                    <a class="typography--link" href="#other-text-elements">Other Text Elements</a>
+                                </li>
+                                <li>
+                                    <a class="typography--link" href="#lists">List Types</a>
+                                </li>
+                                <li>
+                                    <a class="typography--link" href="#code">Code Blocks</a>
+                                </li>
+                                <li>
+                                    <a class="typography--link" href="#buttons">Buttons</a>
+                                </li>
+                                <li>
+                                    <a class="typography--link" href="#quotation">Quotation</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a class="typography--link" href="#figures">Figures</a>
+                            <ol class="list">
+                                <li><a class="typography--link" href="#default-figures">Figure default</a></li>
+                                <li><a class="typography--link" href="#figures-with-caption">Figure w/ Caption</a></li>
+                                <li><a class="typography--link" href="#figures-full-width">Figure full-width</a></li>
                             </ol>
                         </li>
                     </ul>
@@ -55,21 +66,59 @@
             </header>
         </section>
 
-        <section class="layout__section background--orange">
+
+        <section class="layout__section">
+            <h2 id="colors" class="typography--type-1"><b>Colors</b></h2>
+
+            <section id="text-colors" hill-layout="clearfix">
+
+                <div class="layout__column" hill-layout="left width-50">
+                    <h2 class="typography--type-3">1 - Text</h2>
+
+                    <p class="layout__box" iii-color="green">GREEN</p>
+                    <p class="layout__box" iii-color="green-light">GREEN-LIGHT</p>
+                    <p class="layout__box" iii-color="blue">BLUE</p>
+                    <p class="layout__box" iii-color="red">RED</p>
+                    <p class="layout__box" iii-color="orange">ORANGE</p>
+                    <p class="layout__box" iii-color="grey">GREY</p>
+                    <p class="layout__box" iii-color="grey-light">GREY-LIGHT</p>
+                    <p class="layout__box" iii-color="grey-dark">GREY-DARK</p>
+                    <p class="layout__box" iii-color="black">BLACK</p>
+                    <p class="layout__box" iii-color="white" iii-bgcolor="grey">WHITE</p>
+                </div>
+
+                <div class="layout__column" hill-layout="left width-50">
+                    <h2 class="typography--type-3">2 - Backgrounds</h2>
+
+                    <p class="layout__box" iii-bgcolor="green">GREEN</p>
+                    <p class="layout__box" iii-bgcolor="green-light">GREEN-LIGHT</p>
+                    <p class="layout__box" iii-bgcolor="blue">BLUE</p>
+                    <p class="layout__box" iii-bgcolor="red">RED</p>
+                    <p class="layout__box" iii-bgcolor="orange">ORANGE</p>
+                    <p class="layout__box" iii-bgcolor="grey">GREY</p>
+                    <p class="layout__box" iii-bgcolor="grey-light">GREY-LIGHT</p>
+                    <p class="layout__box" iii-bgcolor="grey-dark">GREY-DARK</p>
+                    <p class="layout__box" iii-bgcolor="black">BLACK</p>
+                    <p class="layout__box" iii-bgcolor="white" iii-bgcolor="grey">WHITE</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="layout__section" iii-bgcolor="red">
             <h2 id="typography" class="typography--type-1"><b>Typography</b></h2>
             <section id="headlines">
                 <h2 class="typography--type-2">1 - Headline Types</h2>
 
-                <h1>H1 Heading</h1>
-                <h2>H2 Heading</h2>
-                <h3>H3 Heading</h3>
+                <h1 class="typography--type-1">H1 Heading</h1>
+                <h2 class="typography--type-2">H2 Heading</h2>
+                <h3 class="typography--type-3">H3 Heading</h3>
             </section>
 
             <section id="paragraphs">
                 <h2 class="typography--type-2">2 - Paragraphs</h2>
 
                 <h3>Left aligned Paragraph</h3>
-                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Voluptatum cumque minus, error. Magni officiis eveniet sunt, reprehenderit aliquid quam quo laborum, est ea temporibus pariatur ullam dolore iusto totam asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, sit odio soluta aspernatur omnis error alias ipsa modi ducimus tempore necessitatibus eveniet velit iure, corporis distinctio dicta cum voluptatibus accusantium!</p>
+                <p>Lorem ipsum dolor sit amet, <a href="#" class="typography--link">consectetur</a> adipisicing elit. Voluptatum cumque minus, error. Magni officiis eveniet sunt, reprehenderit aliquid quam quo laborum, est ea temporibus pariatur ullam dolore iusto totam asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, sit odio soluta aspernatur omnis error alias ipsa modi ducimus tempore necessitatibus eveniet velit iure, corporis distinctio dicta cum voluptatibus accusantium!</p>
 
                 <h3>Right aligned Paragraph</h3>
                 <p hill-text="right">Lorem ipsum dolor sit quo laborum, est ea temporibus pariatur ullam dolore iusto totam hal asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, sit odio soluta aspernatur omnis error alias ipsa modi ducimus tempore necessitatibus eveniet velit iure, corporis distinctio dicta cum voluptatibus accusantium!</p>
@@ -85,7 +134,7 @@
                 <ul class="list">
                     <li><strong>Bolded</strong></li>
                     <li><em>Italicized</em></li>
-                    <li><a>Colored</a></li>
+                    <li><a class="typography--link">Colored</a></li>
                     <li><u>Underlined</u></li>
                     <li><small>Small</small></li>
                     <li><del>Strikethrough</del></li>
@@ -124,7 +173,7 @@
             </section>
         </section>
 
-        <section class="layout__section background--green">
+        <section class="layout__section" iii-bgcolor="blue">
             <section id="code">
                 <h2 class="typography--type-2">5 - Code Blocks</h2>
                 <pre><code>
@@ -141,10 +190,14 @@
                 <h2 class="typography--type-2">6 - Buttons</h2>
 
                 <p>
-                <button class="module__button" type="submit">Default Button</button>
+                    <button class="button" type="submit" iii-bgcolor="red">Default Button</button>
                 </p>
                 <p>
-                <a class="module__button" href="#" role="button">Link Button</a>
+                    <a class="button" href="#" role="button" iii-bgcolor="blue">Link Button</a>
+                </p>
+
+                <p>
+                    <button class="button" type="submit" disabled="true">Disabled Button</button>
                 </p>
             </section>
         </section>
@@ -153,9 +206,13 @@
             <section id="quotation">
                 <h2 class="typography--type-2">7 - Quotation</h2>
 
-                <blockquote>
-                    <p>A Blockquote - Lorem ipsum dolor sit quo laborum, est ea temporibus pariatur ullam dolore iusto totam hal asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, sit odio soluta aspernatur omnis error alias ipsa modi ducimus tempore necessitatibus eveniet velit iure.</p>
+                <blockquote class="typography--blockquote" hill-layout="width-40 small-100 clearfix left">
+                    <p>A Blockquote - Lorem ipsum dolor sit quo laborum, est ea temporibus pariatur ullam dolore iusto totam hal asperiores.</p>
+
+                    <cite>Peter Fox - Stadtaffen</cite>
                 </blockquote>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum cumque minus, error. Magni officiis eveniet sunt, reprehenderit aliquid quam quo laborum, est ea temporibus pariatur ullam dolore iusto totam asperiores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, sit odio soluta aspernatur omnis error alias ipsa modi ducimus tempore necessitatibus eveniet velit iure, corporis distinctio dicta cum voluptatibus accusantium! consectetur adipisicing elit. Consectetur, sit odio soluta aspernatur omnis error alias ipsa modi ducimus tempore necessitatibus eveniet velit iure, corporis distinctio dicta cum voluptatibus accusantium!</p>
 
                 <p>An inline <q>quotation</q></p>
             </section>
@@ -165,31 +222,38 @@
             <h2 id="figures" class="typography--type-1"><b>Figures</b></h2>
             <section id="default-figures">
                 <h3 class="typography--type-2">Figure default</h3>
-                <figure class="module__figure">
-                    <img  class="module__figure__image" src="assets/images/articles/this-will-be-the-web_1024x768.png" alt="This will be the Web, Brad Frost">
+                <figure class="figure">
+                    <img  class="figure__image" src="assets/images/articles/this-will-be-the-web_1024x768.png" alt="This will be the Web, Brad Frost">
                 </figure>
             </section>
 
             <section id="figures-with-caption">
                 <h3 class="typography--type-2">Figure w/ Caption</h3>
-                <figure class="module__figure">
-                    <img  class="module__figure__image" src="assets/images/articles/this-will-be-the-web_1024x768.png" alt="This will be the Web, Brad Frost">
+                <figure class="figure">
+                    <img  class="figure__image" src="assets/images/articles/this-will-be-the-web_1024x768.png" alt="This will be the Web, Brad Frost">
 
                     <figcaption>
-                        "This will be the Web", <a href="https://twitter.com/brad_frost">@brad_frost</a>
+                        "This will be the Web", <a href="https://twitter.com/brad_frost" class="typography--link">@brad_frost</a>
                       </figcaption>
                 </figure>
             </section>
         </section>
+
         <section id="figures-full-width">
             <h3 class="typography--type-2">Figure full-width</h3>
-            <div class="hero" hill-layout="clearfix">
-                <div class="hero__col">
-                    <div class="layout__section__background">
-                        <img srcset="assets/images/home/ixis.io__background-video__gestaltanahme__01.png 1x, assets/images/home/ixis.io__background-video__gestaltanahme__01.png 2x" alt="Andreas Klein is working in his office">
-                    </div>
-                </div>
-            </div>
+
+            <figure class="figure--full-width">
+                <img src="assets/images/home/9776__1200x800.jpg"
+                     srcset="assets/images/home/9776__2000x1333.jpg 2000w,
+                             assets/images/home/9776__1200x800.jpg 1200w,
+                             assets/images/home/9776__768x512.jpg 768w,
+                             assets/images/home/9776__960x1211.jpg 767w,
+                             assets/images/home/9776__480x606.jpg 480w">
+
+                <figcaption>
+                    "This will be the Web", <a href="https://twitter.com/brad_frost" class="typography--link">@brad_frost</a>
+                  </figcaption>
+            </figure>
         </section>
     </main>
 

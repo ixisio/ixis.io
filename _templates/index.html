@@ -4,28 +4,159 @@
     @@include('_layout/_head.html', { "title": "" })
 </head>
 <body>
-    @@include('_layout/_header.html')
+    <header class="layout__header">
+        @@include('_layout/_logo.html')
+
+        <div class="layout__header__image">
+            <img src="assets/images/home/9776__1200x800.jpg"
+                 srcset="assets/images/home/9776__2000x1333.jpg 2000w,
+                         assets/images/home/9776__1200x800.jpg 1200w,
+                         assets/images/home/9776__768x512.jpg 768w,
+                         assets/images/home/9776__960x1211.jpg 767w,
+                         assets/images/home/9776__480x606.jpg 480w">
+
+            <a href="#section-intro" class="layout__section__scroll-button" title="Scroll to next section">
+                <svg viewBox="0 0 24 24" class="icon icon--large">
+                    <use xlink:href="assets/svg/sprite.symbol.svg#arrow-down"></use>
+                </svg>
+            </a>
+        </div>
+    </header>
+
     <main>
-        <section>
-            <div class="hero" hill-layout="clearfix">
-                <div class="hero__col">
-                    <div class="layout__section__background">
-                        <img srcset="assets/images/home/9776__2000x1333.jpg 2000w,
-                                     assets/images/home/9776__1200x800.jpg 1200w,
-                                     assets/images/home/9776__768x512.jpg 768w,
-                                     assets/images/home/9776__960x1211.jpg 767w,
-                                     assets/images/home/9776__480x606.jpg 480w">
-                    </div>
-                    <div class="layout__section hero__text">
-                        <h1 class="typography--type-2">
-                            <i>ixis.io</i> - Andreas Klein, Cologne/Germany.<span class="color--grey"> I create accessible User Interfaces, help Teams to improve their Workflows and build large scale Frontend Architectures.</span>
-                        </h1>
-                    </div>
-                </div>
+        <section id="section-intro">
+            <div class="layout__section">
+                <h1 class="typography--type-2">Hey, I'm Andreas Klein.<span iii-color="grey"> I create accessible and intuitive User Interfaces, help Teams to improve their Workflows and build large scale Frontend Architectures.</span>
+                </h1>
+                <p hill-text="center">
+                    <a href="#availability" class="typography--link" hill-layout="space-right" iii-color="grey">Check Availability</a>
+                    <a href="mailto:andy@ixis.io" class="button" iii-bgcolor="blue">Hire me</a>
+                </p>
             </div>
         </section>
-        <section class="layout__section">
-            <p>Some Text</p>
+
+        <section id="testimonials">
+            <section class="layout__text-wrapper layout__space-top">
+                <h2 class="typography--type-3 layout__section__headline" hill-text="center">What my Friends and Customers say</h2>
+            </section>
+
+            <div data-slider="testimonials" data-slider-mobile="false">
+                <section class="layout__section">
+                    <blockquote class="testimonials__entry">
+                        <div class="testimonials__quote">
+                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
+                        </div>
+                        <div class="testimonials__text">
+                             <p>Competent accessibility consulting packaged in an exciting and entertaining workshop</p>
+                        </div>
+
+                        <footer class="testimonials__footer">
+                            <cite class="testimonials__cite">
+                                <a href="http://www.kuehlhaus.com/" target="blank" class="typography--link">
+                                    <img src="assets/images/testimonials/steffen-doell.jpg" alt="Steffen Döll" class="testimonial__image">
+                                    <p class="testimonials__author">Steffen Döll</p>
+                                    Kuehlhaus AG
+                                </a>
+                            </cite>
+                        </footer>
+                    </blockquote>
+                </section>
+
+                <section class="layout__section">
+                    <blockquote class="testimonials__entry">
+                        <div class="testimonials__quote">
+                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
+                        </div>
+                        <div class="testimonials__text">
+                             <p>Andy is a very knowledgable developer with a passion for front-end architecture and user-experience. Working with him is always exciting: he engineers elegant and practical solutions in time and comes up with explicit new ideas while keeping the goals of the project in consideration.</p>
+                        </div>
+
+                        <footer class="testimonials__footer">
+                            <cite class="testimonials__cite">
+                                <a href="http://drublic.de/" target="blank" class="typography--link">
+                                    <img src="assets/images/testimonials/hans-reinl.jpg" alt="Hans Chr. Reinl" class="testimonial__image">
+                                    <p class="testimonials__author">Hans Chr. Reinl</p>
+                                    Freelance Frontend Developer
+                                </a>
+                            </cite>
+                        </footer>
+                    </blockquote>
+                </section>
+
+                <section class="layout__section">
+                    <blockquote class="testimonials__entry">
+                        <div class="testimonials__quote">
+                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
+                        </div>
+                        <div class="testimonials__text">
+                             <p>We searched for some custom-tailored consulting for our project and what we got was not just that. Andreas also delivered enthusiasm and some ‘magic tools’ which really boosted the project. Couldn't ask for more!</p>
+                        </div>
+
+                        <footer class="testimonials__footer">
+                            <cite class="testimonials__cite">
+                                <a href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" target="blank" class="typography--link">
+                                    <p class="testimonials__author">Markus Besenfelder</p>
+                                    Stadt Hamburg
+                                </a>
+                            </cite>
+                        </footer>
+                    </blockquote>
+                </section>
+
+                <section class="layout__section">
+                    <blockquote class="testimonials__entry">
+                        <div class="testimonials__quote">
+                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
+                        </div>
+                        <div class="testimonials__text">
+                             <p>Andreas is an incredibly helpful team-player I had the pleasure to work with. He massively impacted the code quality by applying his thoughts and practice to it while adapting the team’s habits.</p>
+                        </div>
+
+                        <footer class="testimonials__footer">
+                            <cite class="testimonials__cite">
+                                <a href="https://helloanselm.com/" target="blank" class="typography--link">
+                                    <img src="assets/images/testimonials/anselm-hannemann.jpg" alt="Anselm Hannemann" class="testimonial__image">
+                                    <p class="testimonials__author">Anselm Hannemann</p>
+                                    Freelance Frontend Developer
+                                </a>
+                            </cite>
+                        </footer>
+                    </blockquote>
+                </section>
+            </div>
+
+            <section class="layout__text-wrapper layout__space-bottom" data-slider-mobile-more="testimonials">
+                <p hill-text="center">
+                    <a class="typography--link" iii-color="grey">
+                        <svg viewBox="0 0 24 24" class="icon icon--inline icon--small">
+                            <use xlink:href="assets/svg/sprite.symbol.svg#arrow-down"></use>
+                        </svg>See more Testimonials
+                    </a>
+                </p>
+            </section>
+        </section>
+
+        <section id="clients" class="layout__section">
+            <ul>
+                <li>Vaillant</li>
+                <li>Shareacamper</li>
+                <li>MPS Solutions</li>
+                <li>Aktion Mensch</li>
+                <li>Stadt Hamburg</li>
+                <li></li>
+            </ul>
+        </section>
+
+        <section id="availability" class="layout__section" iii-bgcolor="grey">
+            <h2 class="typography--type-3 layout__section__headline" hill-text="center">
+            Availability</h2>
+            <p hill-text="center">I'm working on a project right now until <b>March 2016</b>.</p>
+            <p hill-text="center">You need me as a Consultant or want me to speak on your Event? Let's have <a class="typography--link" href="tel:+491738888987">Call</a> or meet me in Person:</p>
+            <address hill-text="center">
+                <a href="http://bit.ly/1WRT82k" class="typography--no-link typography--link--icon" target="blank">
+                @@include('_modules/_icons/_icons.html', { "name": "location", "inline": true, "size": "small", "attr": "" })
+                Alteburgerstraße 83, 50678 Cologne, Germany</a>
+                </address>
         </section>
     </main>
 

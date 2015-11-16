@@ -1,20 +1,48 @@
 /**
  * COLORS
  */
-$color--green: #709c84;
-$color--green-light: #54b69b;
-$color--orange: #e77249;
-$color--grey: #aaa;
-$color--grey-light: lighten($color--grey, 10);
-$color--white: #fff;
-$color--black: #2e2e2e;
-
-$color--caption: #bbc8cc;
-$color--code-bg: #f5f4f2;
-$color--text: lighten($color--black, 3%);
-$color--links: $color--green-light;
-$color--headings: $color--black;
-$color--ci: $color--green-light;
+$colors: (
+    green: (
+        hex: #32806b,
+        type: 'dark'
+    ),
+    green-light:  (
+        hex: #54b69b,
+        type: 'dark'
+    ),
+    blue: (
+        hex: #147a90,
+        type: 'dark'
+    ),
+    red: (
+        hex: #fd5365,
+        type: 'dark'
+    ),
+    orange: (
+        hex: #ff6c61,
+        type: 'dark'
+    ),
+    grey: (
+        hex: #aaa,
+        type: 'dark'
+    ),
+    grey-light: (
+        hex: #c3c3c3,
+        type: 'light'
+    ),
+    grey-dark: (
+        hex: #373737,
+        type: 'dark'
+    ),
+    black: (
+        hex: #303030,
+        type: 'dark'
+    ),
+    white: (
+        hex: #fff,
+        type: 'light'
+    )
+);
 
 /**
 * Typefaces & Sizes
@@ -40,4 +68,4 @@ $type--heading: (
  * Layouting
  */
 
-$layout--max-width: 600px;
+$layout--max-width: 620px;

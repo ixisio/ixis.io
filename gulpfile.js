@@ -12,8 +12,18 @@ var plugins = {
         rename: require('gulp-rename'),
         pngquant: require('imagemin-pngquant'),
         sass: require('gulp-sass'),
-        uglify: require('gulp-uglify')
+        svgSprite: require('gulp-svg-sprite'),
+        uglify: require('gulp-uglify'),
     };
+
+/**
+ * Helpers
+ */
+function errorLog (error) {
+    console.log(error.message);
+
+    this.emit("end");
+}
 
 /**
  * Declare Gulp Tasks
@@ -29,11 +39,13 @@ gulp.task('browsersync', function() {
 gulp.task('sass', function () {
     gulp.src('./main.scss')
         .pipe(plugins.sass({errLogToConsole: true}))
+        .on('error', errorLog)
         .pipe(gulp.dest('./www/assets/css/'))
         .pipe(plugins.autoprefixer({
             browsers: ['last 2 versions', 'ios 6'],
             cascade: false
         }))
+        .on('error', errorLog)
         .pipe(gulp.dest('./www/assets/css/'))
         .pipe(plugins.browserSync.stream());
 });
@@ -54,6 +66,7 @@ gulp.task('sass:deploy', function () {
 gulp.task('browserify', function() {
     gulp.src('./main.js')
         .pipe(plugins.browserify())
+        .on('error', errorLog)
         .pipe(gulp.dest('./www/assets/js/'))
         .pipe(plugins.browserSync.stream());
 });
@@ -67,8 +80,9 @@ gulp.task('browserify:deploy', function() {
 });
 
 gulp.task('convert-normalize.css-to-scss', function() {
-    return gulp.src(['node_modules/normalize.css/normalize.css'])
+    gulp.src(['node_modules/normalize.css/normalize.css'])
             .pipe(plugins.rename('_normalize.scss'))
+            .on('error', errorLog)
             .pipe(gulp.dest('node_modules/normalize.css/'));
 });
 
@@ -78,6 +92,7 @@ gulp.task('templates', function() {
             prefix: '@@',
             basepath: './'
         }))
+        .on('error', errorLog)
         .pipe(gulp.dest('./www/'))
         .pipe(plugins.browserSync.stream());
 });
@@ -100,14 +115,55 @@ gulp.task('images', function () {
             }],
             use: [plugins.pngquant()]
         }))
+        .on('error', errorLog)
+        .pipe(gulp.dest('www/assets/images'))
+        .pipe(plugins.browserSync.stream());
+});
+
+gulp.task('images:deploy', function () {
+    gulp.src('_assets/images/**/*')
+        .pipe(plugins.imagemin({
+            progressive: true,
+            svgoPlugins: [{
+                removeViewBox: false
+            }],
+            use: [plugins.pngquant()]
+        }))
         .pipe(gulp.dest('www/assets/images'));
-})
+});
+
+gulp.task('icons', function () {
+    gulp.src('_assets/icons/*.svg')
+        .pipe(plugins.svgSprite({
+            mode: {
+                symbol: {
+                    dest: '../'
+                }
+            }
+        }))
+        .on('error', errorLog)
+        .pipe(gulp.dest('./www/assets/icons/'))
+        .pipe(plugins.browserSync.stream());
+});
+
+gulp.task('icons:deploy', function () {
+    gulp.src('_assets/icons/*.svg')
+        .pipe(plugins.svgSprite({
+            mode: {
+                symbol: {
+                    dest: '../'
+                }
+            }
+        }))
+        .pipe(gulp.dest('./www/assets/icons/'));
+});
 
 gulp.task('watch', function () {
     gulp.watch(['./main.js', './**/_*/*.js'], ['browserify']);
-    gulp.watch(['./main.scss', './**/_*/*.scss'], ['sass']);
-    gulp.watch(['./www/**/*.html', './**/_*/*.html'], ['templates']);
-    gulp.watch(['./www/assets/images/**/_*/*'], ['images']);
+    gulp.watch(['./*.scss', './**/_*/*.scss'], ['sass']);
+    gulp.watch(['./**/_*/*.html'], ['templates']);
+    gulp.watch(['./_assets/images/**/*'], ['images']);
+    gulp.watch(['./_assets/icons/**/*.svg'], ['icons']);
 });
 
 gulp.task('dev', [
@@ -117,6 +173,7 @@ gulp.task('dev', [
     'browsersync',
     'templates',
     'images',
+    'icons',
     'watch'
 ]);
 
@@ -125,5 +182,6 @@ gulp.task('deploy', [
     'sass:deploy',
     'browserify:deploy',
     'templates:deploy',
-    'images'
+    'images:deploy',
+    'icons:deploy',
 ]);
