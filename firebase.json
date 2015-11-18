@@ -1,0 +1,9 @@
+{
+  "firebase": "ixis-io",
+  "public": "www",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
