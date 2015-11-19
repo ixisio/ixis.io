@@ -1,15 +1,16 @@
 .testimonials {
     width: 100%;
+    position: relative;
 }
 
 .testimonials__entry {
     position: relative;
     width: 100%;
-    padding-top: 3rem;
 
-    @include layoutFor('>small', '<medium') {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+    padding: 3rem 2rem 0 2rem;
+
+    @include layoutFor('small') {
+        padding-top: 0;
     }
 }
 
@@ -21,13 +22,25 @@
     left: calc(50% - #{$dim/2});
     z-index: 0;
 
-    color: get-color(grey-light);
-    opacity: 0.15;
+    color: get-color(black);
+    opacity: 0.1;
     transform: rotate(180deg);
 
     svg {
         width: $dim;
         height: $dim;
+    }
+
+    @include layoutFor('small') {
+        top: -3.5rem;
+        left: calc(50% - 2rem);
+        // color: get-color(white);
+        // opacity: 0.15;
+
+        svg {
+            width: 3rem;
+            height: 3rem;
+        }
     }
 }
 
