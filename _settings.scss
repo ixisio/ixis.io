@@ -47,9 +47,10 @@ $colors: (
 /**
 * Typefaces & Sizes
 */
-$type--root-font-size: 18px;
-$type--root-font-size--small: 14px;
-$type--root-font-size--large: $type--root-font-size * 1.25;
+$type--root-font-size:          18px;
+$type--root-font-size--small:   16px;
+$type--root-font-size--large:   $type--root-font-size * 1.25;
+$type--root-line-height:        1.6;
 
 $type--body: (
     font-family: ("merriweather",serif),

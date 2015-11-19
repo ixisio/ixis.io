@@ -22,61 +22,32 @@ address,
 
     position: relative;
 
-    @include layoutFor('<small') {
-        padding: 1rem 0.5rem;
-    }
-
-    @include layoutFor('>small','<medium') {
-        padding: 2rem 1rem;
+    @include layoutFor('<medium') {
+        padding: 3rem 2rem;
     }
 
     @include layoutFor('>medium') {
-        padding: 3rem 2rem;
+        padding: 3rem 3rem;
     }
 }
 
 .layout__space-top {
-    @include layoutFor('<small') {
-        padding-top: 1rem;
-    }
-
-    @include layoutFor('>small','<medium') {
-        padding-top: 2rem;
-    }
-
-    @include layoutFor('>medium') {
-        padding-top: 3rem;
-    }
+    padding-top: 3rem;
 }
 
 .layout__space-bottom {
-    @include layoutFor('<small') {
-        padding-bottom: 1rem;
-    }
-
-    @include layoutFor('>small','<medium') {
-        padding-bottom: 2rem;
-    }
-
-    @include layoutFor('>medium') {
-        padding-bottom: 3rem;
-    }
+    padding-bottom: 3rem;
 }
 
 .layout__text-wrapper {
-    @include layoutFor('<small') {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-
-    @include layoutFor('>small','<medium') {
-        padding-left: 1rem;
-        padding-right: 1rem;
+    @include layoutFor('<medium') {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 
     @include layoutFor('>medium') {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }
 
@@ -97,7 +68,7 @@ address,
     bottom: 1.5rem;
     left: 50%;
     width: 2.25rem;
-    margin-left: -1,125rem;
+    margin-left: -1.125rem;
 
     opacity: 0.4;
     transition: transform .4s, opacity .4s;

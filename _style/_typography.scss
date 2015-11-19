@@ -16,6 +16,7 @@ html {
  * Paragraphs
  */
 p {
+    line-height: $type--root-line-height;
     margin-bottom: 1rem;
 }
 
