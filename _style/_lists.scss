@@ -6,6 +6,15 @@
     padding-left: 2.5rem;
 }
 
+.list--unstyled {
+    list-style: none;
+    padding: 0;
+
+    li {
+        padding-bottom: 0.75rem;
+    }
+}
+
 .list--inline {
     list-style: none;
     padding-left: 0;

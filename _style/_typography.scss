@@ -53,7 +53,7 @@ h3 {
 .typography--type-2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: 3rem;
     font-family: map-get($type--heading, font-family);
 
     @include layoutFor('<small') {

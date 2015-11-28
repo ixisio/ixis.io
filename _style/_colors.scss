@@ -15,10 +15,12 @@
     [iii-bgcolor="#{$color-name}"] {
         background-color: $color-hex;
 
-        @if $color-type == dark {
-            &,
-            [class*="typography--"] {
+        &,
+        [class*="typography--"] {
+            @if $color-type == dark {
                 color: get-color(white);
+            } @else {
+                color: get-color(black);
             }
         }
     };

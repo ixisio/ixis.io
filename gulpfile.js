@@ -87,7 +87,7 @@ gulp.task('convert-normalize.css-to-scss', function() {
 });
 
 gulp.task('templates', function() {
-    gulp.src(['./_templates/*.html'])
+    gulp.src(['./_templates/**/*.html'])
         .pipe(plugins.fileinclude({
             prefix: '@@',
             basepath: './'
@@ -98,7 +98,7 @@ gulp.task('templates', function() {
 });
 
 gulp.task('templates:deploy', function() {
-    gulp.src(['./_templates/*.html'])
+    gulp.src(['./_templates/**/*.html'])
         .pipe(plugins.fileinclude({
             prefix: '@@',
             basepath: './'
@@ -161,7 +161,7 @@ gulp.task('icons:deploy', function () {
 gulp.task('watch', function () {
     gulp.watch(['./main.js', './**/_*/*.js'], ['browserify']);
     gulp.watch(['./*.scss', './**/_*/*.scss'], ['sass']);
-    gulp.watch(['./**/_*/*.html'], ['templates']);
+    gulp.watch(['./**/_*/*.html', './_templates/**/*.html'], ['templates']);
     gulp.watch(['./_assets/images/**/*'], ['images']);
     gulp.watch(['./_assets/icons/**/*.svg'], ['icons']);
 });

@@ -1,0 +1,10 @@
+.about-section__heading {
+    margin-top: 1rem;
+
+    @include layoutFor('>small') {
+        margin-top: 2rem;
+    }
+    @include layoutFor('>medium') {
+        margin-top: 3.5rem;
+    }
+}

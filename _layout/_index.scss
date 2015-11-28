@@ -17,6 +17,10 @@ address,
     margin-right: auto;
 }
 
+.no-maxwidth {
+    max-width: none;
+}
+
 .layout__section {
     @include clearfix;
 
@@ -56,6 +60,7 @@ address,
 }
 
 .layout__column {
+    position: relative;
     padding-right: 1rem;
 }
 
