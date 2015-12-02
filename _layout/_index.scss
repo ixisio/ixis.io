@@ -21,6 +21,12 @@ address,
     max-width: none;
 }
 
+.layout__section--large-maxwidth {
+    max-width: $layout--max-width--large;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .layout__section {
     @include clearfix;
 

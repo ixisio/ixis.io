@@ -8,16 +8,18 @@
         @@include('_layout/_logo.html', {"header": true, "color": "white", "linked": false})
 
         <div class="layout__header__image">
-            <img src="assets/images/home/9776__1200x800.jpg"
-                 srcset="assets/images/home/9776__2000x1333.jpg 2000w,
+            <div class="layout__header__image-wrapper">
+                <img src="assets/images/home/9776__1200x800.jpg"
+                     srcset="assets/images/home/9776__2000x1333.jpg 2000w,
                          assets/images/home/9776__1200x800.jpg 1200w,
                          assets/images/home/9776__768x512.jpg 768w,
                          assets/images/home/9776__960x1211.jpg 767w,
                          assets/images/home/9776__480x606.jpg 480w">
 
-            <a href="#section-intro" class="layout__section__scroll-button" title="Scroll to next section" iii-color="black">
-                @@include('_modules/_icons/_icons.html', { "name": "arrow-down", "inline": false, "size": "large", "attr": "" })
-            </a>
+                <a href="#section-intro" class="layout__section__scroll-button" title="Scroll to next section" iii-color="black">
+                    @@include('_modules/_icons/_icons.html', { "name": "arrow-down", "inline": false, "size": "large", "attr": "" })
+                </a>
+            </div>
         </div>
     </header>
 

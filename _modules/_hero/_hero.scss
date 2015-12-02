@@ -3,3 +3,17 @@
     max-height: 100vh;
     overflow: hidden;
 }
+
+.layout__header__image-wrapper {
+    padding-top: (100% / 1.5);
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    @media screen and (max-width: 383px) {
+        padding-top: (100% / 0.79);
+    }
+}
