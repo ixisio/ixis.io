@@ -28,6 +28,9 @@
                             </ol>
                         </li>
                         <li>
+                            <a class="typography--link" href="#icons">Icons</a>
+                        </li>
+                        <li>
                             <a class="typography--link" href="#typography">Typography</a>
                             <ol class="list">
                                 <li>
@@ -66,14 +69,13 @@
             </header>
         </section>
 
-
         <section class="layout__section">
             <h2 id="colors" class="typography--type-1"><b>Colors</b></h2>
 
             <section id="text-colors" hill-layout="clearfix">
 
                 <div class="layout__column" hill-layout="float-left width-50">
-                    <h2 class="typography--type-3">1 - Text</h2>
+                    <h3 class="typography--type-3">1 - Text</h3>
 
                     <p class="layout__box" iii-color="green">GREEN</p>
                     <p class="layout__box" iii-color="green-light">GREEN-LIGHT</p>
@@ -88,7 +90,7 @@
                 </div>
 
                 <div class="layout__column" hill-layout="float-left width-50">
-                    <h2 class="typography--type-3">2 - Backgrounds</h2>
+                    <h3 class="typography--type-3">2 - Backgrounds</h3>
 
                     <p class="layout__box" iii-bgcolor="green">GREEN</p>
                     <p class="layout__box" iii-bgcolor="green-light">GREEN-LIGHT</p>
@@ -104,10 +106,51 @@
             </section>
         </section>
 
+        <section class="layout__section">
+            <h2 id="icons" class="typography--type-1"><b>Icons</b></h2>
+
+            <section hill-layout="clearfix">
+                <div class="layout__column" hill-layout="float-left width-50">
+                    <h3 class="typography--type-3">Iconset</h3>
+                    <ul class="list--unstyled">
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "account", "inline": "", "size": "", "attr": "" }) &mdash; Account</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "arrow-down", "inline": "", "size": "", "attr": "" }) &mdash; Arrow-Down</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "arrow-right", "inline": "", "size": "", "attr": "" }) &mdash; Arrow-Right</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "calendar", "inline": "", "size": "", "attr": "" }) &mdash; Calendar</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "close", "inline": "", "size": "", "attr": "" }) &mdash; Close</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "email", "inline": "", "size": "", "attr": "" }) &mdash; Email</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "github", "inline": "", "size": "", "attr": "" }) &mdash; Github</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "google-plus", "inline": "", "size": "", "attr": "" }) &mdash; Google+</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "info", "inline": "", "size": "", "attr": "" }) &mdash; Info</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "location", "inline": "", "size": "", "attr": "" }) &mdash; Location</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" }) &mdash; Quotation</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "twitter", "inline": "", "size": "", "attr": "" }) &mdash; Twitter</li>
+                    </ul>
+                </div>
+                <div class="layout__column" hill-layout="float-left width-50">
+                    <h3 class="typography--type-3">Sizes</h3>
+
+                    <ul class="list--unstyled">
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "location", "inline": "", "size": "micro", "attr": "" }) &mdash; Micro</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "location", "inline": "", "size": "small", "attr": "" }) &mdash; Small</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "location", "inline": "", "size": "", "attr": "" }) &mdash; Default</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "location", "inline": "", "size": "large", "attr": "" }) &mdash; Large</li>
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "location", "inline": "", "size": "extra-large", "attr": "" }) &mdash; Extra Large</li>
+                    </ul>
+
+                    <h3 class="typography--type-3">Variants</h3>
+
+                    <ul class="list--unstyled">
+                        <li>@@include('_modules/_icons/_icons.html', { "name": "location", "inline": "true", "size": "", "attr": "" }) Inline (Adds right whitespace)</li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
         <section class="layout__section" iii-bgcolor="red">
             <h2 id="typography" class="typography--type-1"><b>Typography</b></h2>
             <section id="headlines">
-                <h2 class="typography--type-2">1 - Headline Types</h2>
+                <h3 class="typography--type-2">1 - Headline Types</h3>
 
                 <h1 class="typography--type-1">H1 Heading</h1>
                 <h2 class="typography--type-2">H2 Heading</h2>

@@ -163,7 +163,7 @@ gulp.task('watch', function () {
     gulp.watch(['./*.scss', './**/_*/*.scss'], ['sass']);
     gulp.watch(['./**/_*/*.html', './_templates/**/*.html'], ['templates']);
     gulp.watch(['./_assets/images/**/*'], ['images']);
-    gulp.watch(['./_assets/icons/**/*.svg'], ['icons']);
+    gulp.watch(['./_modules/_icons/svg/*.svg'], ['icons']);
 });
 
 gulp.task('dev', [
