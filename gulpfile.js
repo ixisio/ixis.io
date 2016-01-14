@@ -147,7 +147,7 @@ gulp.task('icons', function () {
 });
 
 gulp.task('icons:deploy', function () {
-    gulp.src('_assets/icons/*.svg')
+    gulp.src('_modules/_icons/svg/*.svg')
         .pipe(plugins.svgSprite({
             mode: {
                 symbol: {
