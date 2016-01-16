@@ -21,7 +21,7 @@
     "node": "5.0.0"
   },
   "scripts": {
-    "postinstall": "node_modules/gulp/bin/gulp.js deploy"
+    "postinstall": "node_modules/gulp/bin/gulp.js convert-normalize.css-to-scss && node_modules/gulp/bin/gulp.js deploy"
   },
   "devDependencies": {
     "browser-sync": "latest",
@@ -34,8 +34,7 @@
     "gulp-rename": "latest",
     "gulp-sass": "latest",
     "gulp-svg-sprite": "^1.2.13",
-    "gulp-uglify": "latest",
-    "imagemin-pngquant": "^4.2.0"
+    "gulp-uglify": "latest"
   },
   "dependencies": {
     "fastclick": "^1.0.6",

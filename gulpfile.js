@@ -6,7 +6,6 @@ var plugins = {
         autoprefixer: require('gulp-autoprefixer'),
         browserify: require('gulp-browserify'),
         browserSync: require('browser-sync'),
-        copy: require('gulp-copy'),
         cssmin: require('gulp-cssmin'),
         fileinclude: require('gulp-file-include'),
         imagemin: require('gulp-imagemin'),
@@ -109,28 +108,14 @@ gulp.task('templates:deploy', function() {
 
 gulp.task('images', function () {
     gulp.src('_assets/images/**/*')
-        .pipe(plugins.imagemin({
-            progressive: true,
-            svgoPlugins: [{
-                removeViewBox: false
-            }],
-            use: [plugins.pngquant()]
-        }))
-        .on('error', errorLog)
         .pipe(gulp.dest('www/assets/images'))
+        .on('error', errorLog)
         .pipe(plugins.browserSync.stream());
 });
 
 gulp.task('images:deploy', function () {
     gulp.src('_assets/images/**/*')
-        .pipe(plugins.imagemin({
-            progressive: true,
-            svgoPlugins: [{
-                removeViewBox: false
-            }],
-            use: [plugins.pngquant()]
-        }))
-        .pipe(gulp.dest('www/assets/images'));
+        .pipe(gulp.dest('www/assets/images'))
 });
 
 gulp.task('icons', function () {
