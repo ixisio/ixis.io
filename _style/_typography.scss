@@ -99,6 +99,11 @@ h3 {
 
 .typography--no-link {
     text-decoration: none;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
 }
 
 /**

@@ -25,6 +25,14 @@
                 [#{$hill-layout-attribute-name}*="#{$breakpointName}-#{$width}"] {
                     width: #{$width + '%'};
                 }
+
+                [#{$hill-layout-attribute-name}*="#{$breakpointName}-hide"] {
+                    display: none;
+                }
+
+                [#{$hill-layout-attribute-name}*="#{$breakpointName}-show"] {
+                    display: block;
+                }
             };
         }
     }
@@ -37,7 +45,7 @@
     [#{$hill-layout-attribute-name}*="space-left"]   { margin-left:   $hill-layout-space; }
     [#{$hill-layout-attribute-name}*="float-left"]   { float:   left;  }
     [#{$hill-layout-attribute-name}*="float-right"]  { float:   right; }
-    [#{$hill-layout-attribute-name}*="hide"]         { display: none;  }
+    [#{$hill-layout-attribute-name}*="hidden"]         { display: none;  }
     [#{$hill-layout-attribute-name}*="clearfix"]  {
         &:before,
         &:after {

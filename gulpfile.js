@@ -6,6 +6,7 @@ var plugins = {
         autoprefixer: require('gulp-autoprefixer'),
         browserify: require('gulp-browserify'),
         browserSync: require('browser-sync'),
+        copy: require('gulp-copy'),
         cssmin: require('gulp-cssmin'),
         fileinclude: require('gulp-file-include'),
         imagemin: require('gulp-imagemin'),
@@ -158,21 +159,35 @@ gulp.task('icons:deploy', function () {
         .pipe(gulp.dest('./www/assets/icons/'));
 });
 
+gulp.task('copy', function () {
+    gulp.src('_files/**/*')
+        .pipe(gulp.dest('./www/files/'))
+        .on('error', errorLog)
+        .pipe(plugins.browserSync.stream());
+});
+
+gulp.task('copy:deploy', function () {
+    gulp.src('_files/**/*')
+        .pipe(gulp.dest('./www/files/'));
+});
+
 gulp.task('watch', function () {
     gulp.watch(['./main.js', './**/_*/*.js'], ['browserify']);
     gulp.watch(['./*.scss', './**/_*/*.scss'], ['sass']);
     gulp.watch(['./**/_*/*.html', './_templates/**/*.html'], ['templates']);
     gulp.watch(['./_assets/images/**/*'], ['images']);
+    gulp.watch(['./_files/**/*'], ['copy']);
     gulp.watch(['./_modules/_icons/svg/*.svg'], ['icons']);
 });
 
-gulp.task('dev', [
+gulp.task('develop', [
     'convert-normalize.css-to-scss',
     'sass',
     'browserify',
     'browsersync',
     'templates',
     'images',
+    'copy',
     'icons',
     'watch'
 ]);
@@ -183,5 +198,6 @@ gulp.task('deploy', [
     'browserify:deploy',
     'templates:deploy',
     'images:deploy',
+    'copy:deploy',
     'icons:deploy',
 ]);

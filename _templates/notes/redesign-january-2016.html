@@ -8,13 +8,13 @@
     <header class="layout__section" iii-bgcolor="green">
         @@include('_layout/_logo.html', {"header": false, "color": "white", "linked": true})
 
-        <h1 class="typography--type-1 color--white">Website Redesign December 2015</h1>
-        <p>I relaunched my website this year in december. Read why !?</p>
+        <h1 class="typography--type-1 color--white">Website Redesign January 2016</h1>
+        <p>I relaunched my website this year. Read why !?</p>
     </header>
 
     <main>
         <article class="layout__section">
-            <p>I created a full automated, linted, deploy'able and over-configured blog page with Node.js and in 2013. This website is still available at <a target="blank" class="typography--link" href="//andreasklein-org.herokuapp.com">andreasklein-org.herokuapp.com</a>. This time the main focus will be on <strong>Simplicity</strong>.</p>
+            <p>I created a full automated, linted, deploy'able and over-configured blog page with Node.js and in 2013. This website is still available at <a target="blank" class="typography--link" href="//andreasklein-org.herokuapp.com">andreasklein-org.herokuapp.com</a>. This time the main focus will be on <strong>Simplicity</strong><a class="typography--no-link" href="#footnotes"><strong>&sup1;</strong></a>.</p>
 
             <p>Of course I'll use some tools to optimize loading performance..and yeah, there will be a strategy to continuous deliver my site. But apart from that it's just plain simple HTML and CSS.</p>
 
@@ -39,7 +39,7 @@
             <p>I use SASS to pre-process my stylesheets and gulp to post-process my CSS &hellip; No discussion about that! There are enough articles explaining benefits and pitfalls of SASS.</p>
 
             <h3 class="typography--type-3">Build</h3>
-            <p>Optimization of the loading performance of my website is one of the main reasons of this redesign. I do images optimization for web automatically during my build. I also use suitable images for every viewport with the new <code>&lt;picture&gt;</code>&sup1; element to not overstress other peoples bandwidth. </p>
+            <p>Optimization of the loading performance of my website is one of the main reasons of this redesign. I do images optimization for web automatically during my build. I also use suitable images for every viewport with the new <code>&lt;picture&gt;</code><a class="typography--no-link" href="#footnotes">&sup2;</a> element to not overstress other peoples bandwidth. </p>
 
             <h3 class="typography--type-3">Deployment &amp; Continuous Integration</h3>
             <p><a target="blank" class="typography--link" href="//codeship.io">Codeship</a> &bull; Codeship &bull; Codeship &hellip; is awesome !</p>
@@ -53,8 +53,9 @@
         </article>
 
         <footer class="layout__section">
-            <h3 class="typography--type-3">Footnotes</h3>
-            <p>&sup1; <a target="blank" class="typography--link" href="//html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element">Picture Element Specification</a></p>
+            <h3 id="footnotes" class="typography--type-3">Footnotes</h3>
+            <p>&sup1; <a target="blank" class="typography--link" href="//bastianallgeier.com/notes/simplicity">Simplicity, Bastian Allgeier</a></p>
+            <p>&sup2; <a target="blank" class="typography--link" href="//html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element">Picture Element Specification</a></p>
         </footer>
     </main>
 

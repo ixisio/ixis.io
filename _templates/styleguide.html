@@ -4,14 +4,17 @@
     @@include('_layout/_head.html', { "title": "Styleguide" })
 </head>
 <body>
-    @@include('_modules/_navigation/_navigation.html', {
-        "active": "styleguide"
-    })
+    <header class="layout__section" iii-bgcolor="yellow">
+        @@include('_layout/_logo.html', {"header": false, "color": "black", "linked": true})
+
+        <h1 class="typography--type-1 color--white">Styleguide</h1>
+        <p>.. of this Website!</p>
+    </header>
 
     <main>
         <section class="layout__section">
             <header>
-                <h1>Styleguide</h1>
+
 
                 <section id="toc">
                     <h2>Table of Contents</h2>
