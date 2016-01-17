@@ -20,7 +20,7 @@ p {
     margin-bottom: 1rem;
 }
 
-[class*="typography--"]{
+[class*="typography--"] {
     font-weight: map-get($type--body, regular);
     color: get-color(black);
 
