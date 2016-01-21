@@ -16,7 +16,8 @@
         background-color: $color-hex;
 
         &,
-        [class*="typography--"] {
+        [class*="typography--"],
+        .article * {
             @if $color-type == dark {
                 color: get-color(white);
             } @else {

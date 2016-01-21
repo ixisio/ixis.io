@@ -22,8 +22,7 @@
   },
   "scripts": {
     "deploy": "node_modules/gulp/bin/gulp.js deploy",
-    "normalizecss": "node_modules/gulp/bin/gulp.js normalize-css",
-    "postinstall": "npm run normalizecss && npm run deploy"
+    "postinstall": "npm run deploy"
   },
   "devDependencies": {
     "browser-sync": "latest",
@@ -36,7 +35,8 @@
     "gulp-rename": "latest",
     "gulp-sass": "latest",
     "gulp-svg-sprite": "^1.2.13",
-    "gulp-uglify": "latest"
+    "gulp-uglify": "latest",
+    "node-normalize-scss": "^1.0.3"
   },
   "dependencies": {
     "fastclick": "^1.0.6",

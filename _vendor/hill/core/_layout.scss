@@ -43,6 +43,12 @@
     [#{$hill-layout-attribute-name}*="space-right"]  { margin-right:  $hill-layout-space; }
     [#{$hill-layout-attribute-name}*="space-bottom"] { margin-bottom: $hill-layout-space; }
     [#{$hill-layout-attribute-name}*="space-left"]   { margin-left:   $hill-layout-space; }
+
+    [#{$hill-layout-attribute-name}*="space-2x-top"]    { margin-top:    ($hill-layout-space * 2); }
+    [#{$hill-layout-attribute-name}*="space-2x-right"]  { margin-right:  ($hill-layout-space * 2); }
+    [#{$hill-layout-attribute-name}*="space-2x-bottom"] { margin-bottom: ($hill-layout-space * 2); }
+    [#{$hill-layout-attribute-name}*="space-2x-left"]   { margin-left:   ($hill-layout-space * 2); }
+
     [#{$hill-layout-attribute-name}*="float-left"]   { float:   left;  }
     [#{$hill-layout-attribute-name}*="float-right"]  { float:   right; }
     [#{$hill-layout-attribute-name}*="hidden"]         { display: none;  }

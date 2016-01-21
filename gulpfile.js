@@ -79,13 +79,6 @@ gulp.task('browserify:deploy', function() {
         .pipe(gulp.dest('./www/assets/js/'));
 });
 
-gulp.task('normalize-css', function() {
-    return gulp.src(['node_modules/normalize.css/normalize.css'])
-            .pipe(plugins.rename('_normalize.scss'))
-            .on('error', errorLog)
-            .pipe(gulp.dest('node_modules/normalize.css/'));
-});
-
 gulp.task('templates', function() {
     gulp.src(['./_templates/**/*.html'])
         .pipe(plugins.fileinclude({
@@ -166,7 +159,6 @@ gulp.task('watch', function () {
 });
 
 gulp.task('dev', [
-    'normalize-css',
     'sass',
     'browserify',
     'browsersync',
@@ -178,11 +170,14 @@ gulp.task('dev', [
 ]);
 
 gulp.task('deploy', [
-    'normalize-css',
     'sass:deploy',
     'browserify:deploy',
     'templates:deploy',
     'images:deploy',
     'copy:deploy',
     'icons:deploy',
+]);
+
+gulp.task('default', [
+    'dev'
 ]);

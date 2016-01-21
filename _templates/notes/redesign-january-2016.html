@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @@include('_layout/_head.html', { "title": "Website Redesign December 2015" })
+    @@include('_layout/_head.html', { "title": "Website Redesign January 2016" })
 </head>
 <body>
     <header class="layout__section" iii-bgcolor="green">
@@ -12,49 +12,49 @@
         <p>I relaunched my website this year. Read why !?</p>
     </header>
 
-    <main>
-        <article class="layout__section">
-            <p>I created a full automated, linted, deploy'able and over-configured blog page with Node.js and in 2013. This website is still available at <a target="blank" class="typography--link" href="//andreasklein-org.herokuapp.com">andreasklein-org.herokuapp.com</a>. This time the main focus will be on <strong>Simplicity</strong><a class="typography--no-link" href="#footnotes"><strong>&sup1;</strong></a>.</p>
+    <main iii-bgcolor="white">
+        <article class="article layout__section">
+            <p>I created a full automated, linted, deploy'able and over-configured blog page with Node.js and in 2013. This website is still available at <a target="blank" href="//andreasklein-org.herokuapp.com">andreasklein-org.herokuapp.com</a>. This time the main focus will be on <strong>Simplicity</strong><a class="typography--no-link" href="#footnotes"><strong>&sup1;</strong></a>.</p>
 
             <p>Of course I'll use some tools to optimize loading performance..and yeah, there will be a strategy to continuous deliver my site. But apart from that it's just plain simple HTML and CSS.</p>
 
-            <h2 class="typography--type-2">My Dev Setup</h2>
+            <h2>My Dev Setup</h2>
             <p>I am a developer, so it's easier for me to write plain HTML instead of using one of these feature-overloaded CMSystems like Wordpress, Drupal or something other I fortunately not know. <br>
-            There are really cool and simple CMSystems out there, for example <a target="blank" class="typography--link" href="//buildwithcraft.com/">Craft</a> totally blows my mind.</p>
+            There are really cool and simple CMSystems out there, for example <a target="blank" href="//buildwithcraft.com/">Craft</a> totally blows my mind.</p>
 
-            <p>Everthing what I'm doing here is totally open source. You find the repository of this website on <a target="blank" class="typography--link" href="https://bitbucket.org/ixisio/ixis.io/">Bitbucket</a></p>
+            <p>Everthing what I'm doing here is totally open source. You find the repository of this website on <a target="blank" href="https://bitbucket.org/ixisio/ixis.io/">Bitbucket</a></p>
 
-            <h3 class="typography--type-3">Markup</h3>
-            <p>So I decided to push plain HTML files to my Server. I use a very simple <a target="blank" class="typography--link" href="//www.npmjs.com/package/gulp-file-include">gulp-plugin</a>, to include some HTML fragmets like header and footer, to not copy/paste the repeating stuff every page again and again.</p>
+            <h3>Markup</h3>
+            <p>So I decided to push plain HTML files to my Server. I use a very simple <a target="blank" href="//www.npmjs.com/package/gulp-file-include">gulp-plugin</a>, to include some HTML fragmets like header and footer, to not copy/paste the repeating stuff every page again and again.</p>
 
             <figure class="figure">
                 <img  class="figure__image" src="/assets/images/notes/redesign-december-2015/markup.png" alt="Markup">
 
                 <figcaption>
-                    "Markup Fragments include with <a target="blank" class="typography--link" href="//www.npmjs.com/package/gulp-file-include">gulp-file-include plugin</a>"
-                  </figcaption>
+                    "Markup Fragments include with <a target="blank" href="//www.npmjs.com/package/gulp-file-include">gulp-file-include plugin</a>"
+                </figcaption>
             </figure>
 
-            <h3 class="typography--type-3">Styling</h3>
+            <h3>Styling</h3>
             <p>I use SASS to pre-process my stylesheets and gulp to post-process my CSS &hellip; No discussion about that! There are enough articles explaining benefits and pitfalls of SASS.</p>
 
-            <h3 class="typography--type-3">Build</h3>
+            <h3>Build</h3>
             <p>Optimization of the loading performance of my website is one of the main reasons of this redesign. I do images optimization for web automatically during my build. I also use suitable images for every viewport with the new <code>&lt;picture&gt;</code><a class="typography--no-link" href="#footnotes">&sup2;</a> element to not overstress other peoples bandwidth. </p>
 
-            <h3 class="typography--type-3">Deployment &amp; Continuous Integration</h3>
-            <p><a target="blank" class="typography--link" href="//codeship.io">Codeship</a> &bull; Codeship &bull; Codeship &hellip; is awesome !</p>
-            <p>A friend of mine, <a href="//twitter.com/medoingthings" target="blank" class="typography--link">Mark Rickert</a> has written a very good article about <a target="blank" class="typography--link" href="//medoingthings.com/writing/2015/03/front-end-deployment-for-the-rest-of-us">Front End Deployment For The Rest Of Us</a>. He explains how to use and configure Codeship as your CI Server. Must read!</p>
+            <h3>Deployment &amp; Continuous Integration</h3>
+            <p><a target="blank" href="//codeship.io">Codeship</a> &bull; Codeship &bull; Codeship &hellip; is awesome !</p>
+            <p>A friend of mine, <a href="//twitter.com/medoingthings" target="blank">Mark Rickert</a> has written a very good article about <a target="blank" href="//medoingthings.com/writing/2015/03/front-end-deployment-for-the-rest-of-us">Front End Deployment For The Rest Of Us</a>. He explains how to use and configure Codeship as your CI Server. Must read!</p>
 
             <figure class="figure">
                 <img  class="figure__image" src="/assets/images/notes/redesign-december-2015/codeship.png" alt="Codeship Build">
 
                 <figcaption>"Codeship CI Build of this Website"</figcaption>
             </figure>
-            
-            <footer class="layout__section">
-                <h3 id="footnotes" class="typography--type-3">Footnotes</h3>
-                <p>&sup1; <a target="blank" class="typography--link" href="//bastianallgeier.com/notes/simplicity">Simplicity, Bastian Allgeier</a></p>
-                <p>&sup2; <a target="blank" class="typography--link" href="//html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element">Picture Element Specification</a></p>
+
+            <footer>
+                <h3 id="footnotes">Footnotes</h3>
+                <p>&sup1; <a target="blank" href="//bastianallgeier.com/notes/simplicity">Simplicity, Bastian Allgeier</a></p>
+                <p>&sup2; <a target="blank" href="//html.spec.whatwg.org/multipage/embedded-content.html#the-picture-element">Picture Element Specification</a></p>
             </footer>
         </article>
     </main>

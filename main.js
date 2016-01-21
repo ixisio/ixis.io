@@ -4,11 +4,11 @@ var $ = require('jquery');
 var Picturefill = require('picturefill');
 
 // Requrie Modules
-var Navigation = require('./_modules/_navigation/navigation');
+// var Navigation = require('./_modules/_navigation/navigation');
 var Slider = require('./_modules/_slider/slider');
 
 // Construct
-new Navigation();
+// new Navigation();
 
 // Google Analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
