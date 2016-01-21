@@ -1,6 +1,8 @@
 {
   "firebase": "ixis-io",
   "public": "www",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "ignore": [
     "firebase.json",
     "**/.*",
