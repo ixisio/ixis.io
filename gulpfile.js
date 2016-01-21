@@ -62,7 +62,7 @@ gulp.task('browserify:deploy', function() {
         .pipe(gulp.dest('./www/assets/js/'));
 });
 
-gulp.task('convert-normalize.css-to-scss', function() {
+gulp.task('normalize-css', function() {
     return gulp.src(['node_modules/normalize.css/normalize.css'])
             .pipe(plugins.rename('_normalize.scss'))
             .pipe(gulp.dest('node_modules/normalize.css/'));
@@ -94,7 +94,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('dev', [
-    'convert-normalize.css-to-scss',
+    'normalize-css',
     'sass',
     'browserify',
     'browsersync',
@@ -103,7 +103,7 @@ gulp.task('dev', [
 ]);
 
 gulp.task('deploy', [
-    'convert-normalize.css-to-scss',
+    'normalize-css',
     'sass:deploy',
     'browserify:deploy',
     'templates:deploy',
