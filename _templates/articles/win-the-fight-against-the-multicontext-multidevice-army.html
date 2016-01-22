@@ -26,7 +26,7 @@
             The browser is the only <em>Player of the Game</em> that knows exactly all parameters of the device, the OS, the actual bandwidth, and so on... everything!</p>
 
             <figure class="figure">
-                <img src="/gfx/this-will-be-the-web.png" alt="This will be the Web, Brad Frost">
+                <img src="/assets/images/articles/this-will-be-the-web_1024x768.png" alt="This will be the Web, Brad Frost">
                 <figcaption>
                     "This will be the Web", <a href="https://twitter.com/brad_frost">@brad_frost</a>
                 </figcaption>
@@ -43,20 +43,16 @@
             <p>I know, that's not new. But the client couldn't handle <a href="http://alistapart.com/article/responsive-web-design">RWD</a> alone. This is a multi-player game! Sometimes, there is a connection between them, really? Yeah, and sometimes this is called EDGE!
             Why we should take care of the preparation of 5000 different image resources of one motif?  <a href="http://www.w3.org/TR/html-picture-element/">The picture element</a> bloats the DOM, <a href="https://github.com/igrigorik/http-client-hints">Client Hints</a> are only possible with javascript these days, and another promising solution is still missing.</p>
 
-            <p><strong>UA's should become more intelligent!</strong><br>
-            <strong>No more Feature-Detection or Browser-Sniffing!</strong></p>
+            <section>
+                <div class="typography--blockquote">
+                    <p>UA's should become more intelligent!</p>
+                    <p>No more Feature-Detection or Browser-Sniffing!</p>
+                </div>
+            </section>
 
             <p>I wrote down these ideas, after a night of horror :-]
             Struggling with desktop-first CSS overwrites (OMG), finding a working <em>polyfill</em> for responsive-images which has the fewest disadvantages (No way!) AND get a bandwidth-detection <em>polyfill</em> running and respond to the previously collected information (hmmm, failed!)
             Okay! Seems as if we are not ready for this new web!? If I say <em>we</em>, I mean the browser vendors, which give us the ability to create the web.</p>
-
-            <section>
-                <blockquote class="typography--blockquote">
-                    <p>I wrote down these ideas, after a night of horror :-] <a href="http://twitter.com/ixisio">@me</a></p>
-                </blockquote>
-            </section>
-
-            <p>So guys, please be lenient with me!</p>
 
             <footer>
                 <h3 id="footnotes">Footnotes</h3>
@@ -66,10 +62,11 @@
                     <li><a href="http://www.html5rocks.com/en/mobile/cross-device/">A non-responsive approach to building cross-device webapps</a>, Boris Smus <a href="https://twitter.com/borismus">@borismus</a></li>
                     <li><a href="http://bradfrostweb.com/blog/web/responsive-web-design-missing-the-point/">Responsive Web Design: Missing the Point</a>, Brad Frost <a href="https://twitter.com/brad_frost">@brad_frost</a></li>
                     <li><a href="http://futurefriend.ly/">Future Friendly</a>, Luke Wroblewski <a href="https://twitter.com/lukew">@lukew</a>, et al.</li>
+                    <li>Credits to <a href="https://twitter.com/brad_frost">Brad Frost</a> for the awesome Image [<a href="http://bradfrostweb.com/blog/post/this-is-the-web/">Source</a>]</li>
                 </ul>
 
-                <p><em>Credits to <a href="https://twitter.com/brad_frost">Brad Frost</a> for the awesome Image [<a href="http://bradfrostweb.com/blog/post/this-is-the-web/">Source</a>]</em></p>
-
+                <p hill-layout="space-2x-top">
+                @@include('_modules/_icons/_icons.html', { "name": "calendar", "inline": true, "size": "small", "attr": "" }) written on 16 October 2013, Cologne / Germany</p>
             </footer>
         </article>
     </main>

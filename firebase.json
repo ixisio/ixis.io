@@ -7,5 +7,10 @@
     "firebase.json",
     "**/.*",
     "**/node_modules/**"
-  ]
+  ],
+  "redirects": [ {
+  	"source" : "/articles/how-and-why-i-create-this-blog",
+  	"destination" : "http://andreasklein-org.herokuapp.com/articles/how-and-why-i-create-this-blog",
+  	"type" : 301
+  }]
 }

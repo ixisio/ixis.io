@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('_layout/_head.html', { "title": "Bootstrap Touch" })
+</head>
+<body>
+    <header class="layout__section" iii-bgcolor="yellow">
+        @@include('_layout/_logo.html', {"header": false, "color": "black", "linked": true})
+
+        <h1 class="typography--type-2 color--white">Bootstrap Touch</h1>
+
+        <p>One of <a class="typography--link" href="http://getbootstrap.com/">Twitter Bootstrap&#39;s</a> largest gabs is, it&#39;s not optimized for touch-enabled devices.
+        Yeah I mean, it&#39;s not optimized for these device-types, but it works okay. But sometimes, we as developers have to enlarge the functionality of a BS component. You all know, this is <i>pain-in-the-ass</i>.</p>
+    </header>
+
+    <main iii-bgcolor="white">
+        <article class="article layout__section">
+
+            <p>For example, a UX expert wants to close the popover component by clicking on the whole document, instead of clicking on the link target again. You add some lines of code to <code>popover.js</code>, your UX expert is enormously happy, but the update capability of that component is no longer available. That sucks monstrous!</p>
+
+            <p>The next example is the foundation and the idea of a framework, that is build on top of BS, and I called it <strong>Bootstrap-Touch</strong>.</p>
+
+            <h2>The Aim of Bootstrap-Touch</h2>
+
+            <p>BS-Touch do not change the original BS Library sourcecode. It&#39;s a layer for touch interaction and visual improvements, that doesn&#39;t work as a standalone framework.
+            The framework has a build-in touch detection and invoke its functionality only on touch or MSPointer enabled devices, like the iPhone or Nokia WindowsPhone.
+            It&#39;s not a part of BS, it&#39;s an extension that works hand-in-hand with BS.</p>
+
+            <h2>How it works</h2>
+            <p>You have to load two additional files into your existing BS project.</p>
+            <pre><code class="lang-javascript">bootstrap-touch.js
+bootstrap-touch.css</code></pre>
+
+            <p>If the plugin detects a touch-enabled device, it auto-overwrites the default component behavior and styling.
+            If you are familiar with <a href="http://gruntjs.com/">Grunt.js - the JavaScript Task Runner</a>, you can also use a modified BS build process to integrate/concat BS-Touch directly into your bootstrap files (future Todo).</p>
+
+            <h2>Project State</h2>
+            <p>Currently, I work on a technical concept of such a framework. I&#39;m trying to find an answer, on how this could be realized.
+            Last Week, I released a early prototype of one BS component for touch-enabled devices. The project sourcecode is available on <a href="https://github.com/ixisio/bootstrap-touch-carousel">Github</a>. See the live <a href="//ixisio.github.io/bootstrap-touch-carousel/">demo</a>.</p>
+
+            <p>
+                <strong>[UPDATE] 11.02.2014</strong> Projects page is online:
+            </p>
+            <p>
+                @@include('_modules/_icons/_icons.html', { "name": "arrow-right", "inline": true, "size": "small", "attr": "" })
+                <a href="//ixisio.github.io/bootstrap-touch-carousel/">ixisio.github.io/bootstrap-touch-carousel</a>
+            </p>
+
+            <h2>Next Steps</h2>
+            <p>If you are interested in this project, please help me to find some cool ideas on how to realize something like this, <a href="https://github.com/ixisio/bootstrap-touch">fork</a> the project on Github or just have a talk on <a href="http://twitter.com/ixisio">twitter</a>.
+            In the following list, you can find a few ideas, bugs and improvements I&#39;ve already collected. Feel free to complete the list..</p>
+
+            <p>
+                @@include('_modules/_icons/_icons.html', { "name": "arrow-right", "inline": true, "size": "small", "attr": "" })
+                <a href="https://github.com/ixisio/bootstrap-touch/issues" target="_blank">Issue Tracker on Github</a>
+            </p>
+
+            <footer>
+                <p hill-layout="space-2x-top">
+                @@include('_modules/_icons/_icons.html', { "name": "calendar", "inline": true, "size": "small", "attr": "" }) written on 9 October 2013, Cologne Germany</p>
+            </footer>
+        </article>
+    </main>
+
+    @@include('_layout/_footer.html')
+</body>
+</html>
