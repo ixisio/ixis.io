@@ -16,5 +16,5 @@ var Slider = require('./_modules/_slider/slider');
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-33471444-1', 'auto');
+ga('create', 'UA-72820202-1', 'auto');
 ga('send', 'pageview');
