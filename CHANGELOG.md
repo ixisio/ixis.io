@@ -2,6 +2,8 @@
 
 ## HEAD
 * Update Hillcss to v1.0.0 and fix breaking changes
+* Add new Client Logo (Remove)
+* Add new Icon for Downloads
 * Minor Code polish
 * Compress images and save about 2.5MB
 
