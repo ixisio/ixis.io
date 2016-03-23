@@ -1,13 +1,5 @@
-
-// Require Vendors
-var $ = require('jquery');
-
-// Requrie Modules
-// var Navigation = require('./_modules/_navigation/navigation');
+// Modules
 var Slider = require('./_modules/_slider/slider');
-
-// Construct
-// new Navigation();
 
 // Google Analytics
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
