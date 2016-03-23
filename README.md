@@ -12,3 +12,7 @@ Of course I'll use some tools for optimizing loading performance..and yeah, ther
 * Node.js
 * node-sass
 * Gulp.js
+
+## Gulp Tasks
+* `grunt dev` (default)
+* `grunt deploy`

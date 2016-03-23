@@ -1,13 +1,13 @@
 <footer id="footer">
     <section id="about" class="layout__section">
-        <section>
-            <div class="layout__column" hill-layout="space-top float-left width-25">
+        <section hill-layout="row">
+            <div hill-layout="space-top box-1/5">
                 <img class="figure--rounded" src="/assets/images/home/avatar.jpg" alt="Andreas Klein">
             </div>
-            <div hill-layout="float-left width-75">
+            <div hill-layout="box-4/5">
                 <h2 class="typography--type-2 about-section__heading">About Andreas Klein</h2>
             </div>
-            <div hill-layout="float-left width-100">
+            <div hill-layout="box-1/1">
                 <p>As a freelance Frontend Developer, I create accessible and intuitive Web-Interfaces for Humans.</p>
 
                 <p>I help Agencies and Companies to realize large scale projects with a focus on Responsive Webdesign, Accessibility, Webstandards, Performance, Coding-Guidelines, Styleguides, Workflows and choosing the right Tools and Frameworks. Outside of the web, I’m a proud father of two beautiful children, a passionate freestyle skateboarder/snowboarder and I like the taste of good <a class="typography--link" href="http://www.ernst-kaffee.de/">espresso</a>.</p>
@@ -23,9 +23,9 @@
     </section>
 
     <section class="layout__section" iii-bgcolor="black">
-        <div class="layout__section--large-maxwidth">
+        <div class="layout__section--large-maxwidth" hill-layout="row">
 
-            <div id="blogposts" class="layout__column" hill-layout="space-2x-bottom float-left width-33.3 medium-50 small-100">
+            <div id="blogposts" hill-layout="space-bottom box-1/3 device-medium-1/2 device-small-1/1">
                 <h2 class="typography--type-3 layout__section__headline">
                 Writings and Notes</h2>
                 <ul class="list--inconized">
@@ -48,7 +48,7 @@
                 </ul>
             </div>
 
-            <div id="contact" class="layout__column" hill-layout="space-2x-bottom float-left width-33.3 medium-50 small-100">
+            <div id="contact" hill-layout="space-bottom box-1/3 device-medium-1/2 device-small-1/1">
                 <h2 class="typography--type-3 layout__section__headline">
                 Contact me</h2>
                 <address hill-layout="space-bottom">
@@ -66,9 +66,9 @@
                 </address>
             </div>
 
-            <div id="social" class="layout__column" hill-layout="float-left width-33.3 medium-100 small-100">
+            <div id="social" hill-layout="box-1/3 device-medium-1/1 device-small-1/1">
                 <h2 class="typography--type-3 layout__section__headline">Social</h2>
-                <ul class="list--inline">
+                <ul class="list--inline" hill-layout="space-bottom-2x">
                     <li>
                         <a class="typography--link--icon" href="//twitter.com/ixisio" title="Follow me on Twitter">
                         @@include('_modules/_icons/_icons.html', { "name": "twitter", "inline": true, "size": "", "attr": "iii-color=blue" })
@@ -91,7 +91,7 @@
                     </li>
                 </ul>
 
-                <h2 class="typography--type-3" hill-layout="space-top">Friends &amp; Partner</h2>
+                <h2 class="typography--type-3">Friends &amp; Partner</h2>
 
                 <ul class="list--inline">
                     <li>

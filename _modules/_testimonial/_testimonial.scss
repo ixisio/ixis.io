@@ -9,7 +9,7 @@
 
     padding: 3rem 2rem 0 2rem;
 
-    @include layoutFor('small') {
+    @include hill-device-is('small') {
         padding-top: 0;
     }
 }
@@ -31,7 +31,7 @@
         height: $dim;
     }
 
-    @include layoutFor('small') {
+    @include hill-device-is('small') {
         top: -3.5rem;
         left: calc(50% - 2rem);
         // color: get-color(white);

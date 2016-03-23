@@ -2,7 +2,7 @@
 // Slider is a
 
 
-@include layoutFor(small) {
+@include hill-device-is('small') {
     [data-slider-mobile="false"] {
         &:not(.is--opened) > * {
             display: none;
@@ -18,7 +18,7 @@
     display: none;
     cursor: pointer;
 
-    @include layoutFor(small) {
+    @include hill-device-is('small') {
         display: block;
     }
 }
@@ -120,7 +120,7 @@
         transform: rotate(90deg) translate3d(0, 5px, 0);
     }
 
-    @include layoutFor('small') {
+    @include hill-device-is('small') {
         left: 0;
     }
 }
@@ -133,7 +133,7 @@
         transform: rotate(-90deg) translate3d(0, 5px, 0);
     }
 
-    @include layoutFor('small') {
+    @include hill-device-is('small') {
         right: 0;
     }
 }
