@@ -1,10 +1,11 @@
 .about-section__heading {
     margin-top: 1rem;
 
-    @include layoutFor('>small') {
+    @include hill-device-min('small') {
         margin-top: 2rem;
     }
-    @include layoutFor('>medium') {
+
+    @include hill-device-min('medium') {
         margin-top: 3.5rem;
     }
 }

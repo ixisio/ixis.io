@@ -1,8 +1,2 @@
 @import 'node_modules/node-normalize-scss/normalize';
-
-/**
- * hill.css
- * Layouting made easy
- */
-@import 'hill-settings';
-@import 'hill/hill';
+@import 'node_modules/hillcss/hill';

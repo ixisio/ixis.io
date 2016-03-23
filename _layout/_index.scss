@@ -32,11 +32,11 @@ address,
 
     position: relative;
 
-    @include layoutFor('<medium') {
+    @include hill-device-max('medium') {
         padding: 3rem 2rem;
     }
 
-    @include layoutFor('>medium') {
+    @include hill-device-min('medium') {
         padding: 3rem 3rem;
     }
 }
@@ -50,12 +50,12 @@ address,
 }
 
 .layout__text-wrapper {
-    @include layoutFor('<medium') {
+    @include hill-device-max('medium') {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 
-    @include layoutFor('>medium') {
+    @include hill-device-min('medium') {
         padding-left: 3rem;
         padding-right: 3rem;
     }
@@ -63,11 +63,6 @@ address,
 
 .layout__section__headline {
     margin-top: 0;
-}
-
-.layout__column {
-    position: relative;
-    padding-right: 1rem;
 }
 
 .layout__box {
@@ -113,16 +108,16 @@ address,
     //     right: 30%;
     // }
 
-    // @include layoutFor('<small') {
+    // @include hill-device-max('small') {
     //     top: 30%;
     //     right: 15%;
     // }
 
-    // @include layoutFor('>medium') {
+    // @include hill-device-min('medium') {
     //     right: 35%;
     // }
 
-    // @include layoutFor('>large') {
+    // @include hill-device-min('large') {
     //     top: 42%;
     // }
 }
