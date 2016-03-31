@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('_layout/_head.html', { "title": "Hillcss Framework v1.0 is Ready" })
+</head>
+<body>
+    <header class="layout__section" iii-bgcolor="blue">
+        @@include('_layout/_logo.html', {"header": false, "color": "white", "linked": true})
+
+        <h1 class="typography--type-1 color--white">Hillcss Framework v1.0 is Ready</h1>
+        <p>A couple of days ago a friend of mine <a href="https://twitter.com/vadimhermann" title="Vadim Hermann" class="typography--no-link">@Vaddo</a> and me launched a CSS Framework called hillcss. It's now available on <a href="https://github.com/teamwrk/hillcss/" title="Hillcss on Github" class="typography--link">Github</a>.</p>
+    </header>
+
+    <main iii-bgcolor="white">
+        <article class="article layout__section">
+
+            <h2>Hillcss - A Sass Toolkit for Intuitive Layouting</h2>
+
+            <section>
+                <figure class="figure" hill-layout="float-left space-right box-1/4 device-medium-1/3 device-small-1/1 device-extra-small-1/1">
+                    <a href="https://github.com/teamwrk/hillcss/" title="Hillcss - A Sass Toolkit for Intuitive Layouting">
+                        <img class="figure__image" src="//www.teamwrk.io/src/assets/hillcss.svg" alt="Hillcss - A Sass Toolkit for Intuitive Layouting">
+                    </a>
+                </figure>
+            </section>
+
+            <p>Starting with the foundation of a frontend project is always about the same repeating things. Creating a Grid for example: Decide how many columns you need and talking with design teams to find a suitable solution for the design layout.</p>
+            <p>With hillcss, we start from across. First define the defaults for your project. After that frontend and design teams can start their work but now with the same fundamentals: </p>
+
+            <ul>
+                <li>Grid and gutter spaces</li>
+                <li>Vertical and horizontal spaces</li>
+                <li>Breakpoints</li>
+                <li>Layers on which elements can be placed (<code>z-index</code> levels)</li>
+                <li>Root text size</li>
+                <li>Text sizes based on the root size</li>
+            </ul>
+
+            <p>Hillcss comprises exactly that parts. As we think enough to create a skeleton of a website or application. The next step is to fill this skeleton with live, your modules. Each module can be placed inside a hillcss layout container. We call them boxes. A box can spread differently on the page. Therefore we create a box <a href="https://github.com/teamwrk/hillcss/blob/master/docs/README.md#32---layout-boxes">grid layout based on fractions</a>.</p>
+
+            <p>There is a lot more to say about hillcss, but for now I think it gives you a short overview why we create hillcss and how you could benefit from it when using it for your next upcoming project. Your can read more about the actual feature-set of hillcss on <a href="https://github.com/teamwrk/hillcss/blob/master/docs/README.md#3---use-hillcss">Github</a>.</p>
+
+            <footer>
+                <p hill-layout="space-top-2x">
+                @@include('_modules/_icons/_icons.html', { "name": "calendar", "inline": true, "size": "small", "attr": "" }) written on 31 March 2016, Chamonix, France</p>
+            </footer>
+        </article>
+    </main>
+
+    @@include('_layout/_footer.html')
+</body>
+</html>
