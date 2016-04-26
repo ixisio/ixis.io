@@ -10,12 +10,15 @@
             <div hill-layout="box-1/1">
                 <p>As a freelance Frontend Developer, I create accessible and intuitive Web-Interfaces for Humans.</p>
 
-                <p>I help Agencies and Companies to realize large scale projects with a focus on Responsive Webdesign, Accessibility, Webstandards, Performance, Coding-Guidelines, Styleguides, Workflows and choosing the right Tools and Frameworks. Outside of the web, I’m a proud father of two beautiful children, a passionate freestyle skateboarder/snowboarder and I like the taste of good <a class="typography--link" href="http://www.ernst-kaffee.de/">espresso</a>.</p>
+                <p>I help Agencies and Companies to realize large scale projects with a focus on Responsive Webdesign, Accessibility, Webstandards, Performance, Coding-Guidelines, Styleguides, Workflows and choosing the right Tools and Frameworks. Outside of the web, I’m a proud father of two beautiful children, a passionate freestyle skateboarder/snowboarder and I like the taste of good <a class="typography--link" href="http://www.ernst-kaffee.de/" data-track>espresso</a>.</p>
 
-                <p>If there is still time, I write on my <a class="typography--link" href="http://ixis.io">personal blog</a> about Frontend Stuff, Accessibility and Node.js programming.</p>
+                <p>If there is still time, I write on my <a class="typography--link" href="http://ixis.io" data-track>personal blog</a> about Frontend Stuff, Accessibility and Node.js programming.</p>
 
                 <p>
-                    <a href="/files/CV__Andreas-Klein.pdf" target="blank" class="typography--link--icon" hill-layout="space-right" iii-color="black">
+                    <a href="/files/CV__Andreas-Klein.pdf" target="blank" class="typography--link--icon" hill-layout="space-right" iii-color="black" data-track='{
+                        "category": "Footer",
+                        "action": "Download CV Button clicked"
+                    }'>
                         @@include('_modules/_icons/_icons.html', { "name": "download", "inline": true, "size": "small", "attr": "" })Download my CV</a>
                 </p>
             </div>
@@ -31,23 +34,23 @@
                 <ul class="list--inconized">
                     <li>
                         @@include('_modules/_icons/_icons.html', { "name": "arrow-right", "inline": true, "size": "small", "attr": "" })
-                        <a class="typography--no-link" href="/notes/hillcss-v1-0.html">Note: Hillcss Framework v1.0 is Ready</a>
+                        <a class="typography--no-link" href="/notes/hillcss-v1-0.html" data-track='{"category": "Footer: Writings and Notes"}'>Note: Hillcss Framework v1.0 is Ready</a>
                     </li>
                     <li>
                         @@include('_modules/_icons/_icons.html', { "name": "arrow-right", "inline": true, "size": "small", "attr": "" })
-                        <a class="typography--no-link" href="/notes/redesign-january-2016.html">Note: Website Redesign January 2016</a>
+                        <a class="typography--no-link" href="/notes/redesign-january-2016.html" data-track='{"category": "Footer: Writings and Notes"}'>Note: Website Redesign January 2016</a>
                     </li>
                     <li>
                         @@include('_modules/_icons/_icons.html', { "name": "arrow-right", "inline": true, "size": "small", "attr": "" })
-                        <a class="typography--no-link" href="/articles/win-the-fight-against-the-multicontext-multidevice-army.html">Win the Fight against the multicontext / multidevice Army</a>
+                        <a class="typography--no-link" href="/articles/win-the-fight-against-the-multicontext-multidevice-army.html" data-track='{"category": "Footer: Writings and Notes"}'>Win the Fight against the multicontext / multidevice Army</a>
                     </li>
                     <li>
                         @@include('_modules/_icons/_icons.html', { "name": "arrow-right", "inline": true, "size": "small", "attr": "" })
-                        <a class="typography--no-link" href="/articles/bootstrap-touch.html">Bootstrap Touch</a>
+                        <a class="typography--no-link" href="/articles/bootstrap-touch.html" data-track='{"category": "Footer: Writings and Notes"}'>Bootstrap Touch</a>
                     </li>
                     <li>
                         @@include('_modules/_icons/_icons.html', { "name": "arrow-right", "inline": true, "size": "small", "attr": "" })
-                        <a class="typography--no-link" href="/articles/how-and-why-i-create-this-blog">How and why I create this Blog (2013)</a>
+                        <a class="typography--no-link" href="/articles/how-and-why-i-create-this-blog" data-track='{"category": "Footer: Writings and Notes"}'>How and why I create this Blog (2013)</a>
                     </li>
                 </ul>
             </div>
@@ -58,14 +61,23 @@
                 <address hill-layout="space-bottom">
                     Andreas Klein<br>
                     <br>
-                    <a href="http://bit.ly/1MBSyBm" class="typography--link--icon" target="blank">
+                    <a href="http://bit.ly/1MBSyBm" class="typography--link--icon" target="blank" data-track='{
+                        "category": "Footer",
+                        "action": "Address Link clicked"
+                    }'>
                         50678 Cologne, Germany<br>
                     </a>
                     <br>
                     <br>
-                    phone. <a class="typography--link" href="tel:+491738888987">+491738888987</a>
+                    phone. <a class="typography--link" href="tel:+491738888987" data-track='{
+                        "category": "Footer",
+                        "action": "Phone Link clicked"
+                    }'>+491738888987</a>
                     <br>
-                    mail.&nbsp;&nbsp; <a class="typography--link" href="mailto:andy@ixis.io">andy@ixis.io</a>
+                    mail.&nbsp;&nbsp; <a class="typography--link" data-track='{
+                        "category": "Footer",
+                        "action": "Email Link clicked"
+                    }' href="mailto:andy@ixis.io">andy@ixis.io</a>
                 </address>
             </div>
 
@@ -73,22 +85,34 @@
                 <h2 class="typography--type-3 layout__section__headline">Social</h2>
                 <ul class="list--inline" hill-layout="space-bottom-2x">
                     <li>
-                        <a class="typography--link--icon" href="//twitter.com/ixisio" title="Follow me on Twitter">
+                        <a class="typography--link--icon" href="//twitter.com/ixisio" title="Follow me on Twitter" data-track='{
+                        "category": "Footer",
+                        "action": "Twitter Link clicked"
+                    }'>
                         @@include('_modules/_icons/_icons.html', { "name": "twitter", "inline": true, "size": "", "attr": "iii-color=blue" })
                         </a>
                     </li>
                     <li>
-                        <a class="typography--link--icon" href="//github.com/ixisio" title="Fork me on Github">
+                        <a class="typography--link--icon" href="//github.com/ixisio" title="Fork me on Github" data-track='{
+                        "category": "Footer",
+                        "action": "Github Link clicked"
+                    }'>
                         @@include('_modules/_icons/_icons.html', { "name": "github", "inline": true, "size": "", "attr": "iii-color=white" })
                         </a>
                     </li>
                     <li>
-                        <a class="typography--link--icon" href="//plus.google.com/u/0/+AndreasKlein_01" title="Follow me on Google+">
+                        <a class="typography--link--icon" href="//plus.google.com/u/0/+AndreasKlein_01" title="Follow me on Google+" data-track='{
+                        "category": "Footer",
+                        "action": "Googleplus Link clicked"
+                    }'>
                         @@include('_modules/_icons/_icons.html', { "name": "google-plus", "inline": true, "size": "", "attr": "iii-color=orange" })
                         </a>
                     </li>
                     <li>
-                        <a class="typography--link--icon" href="//www.xing.com/profile/Andreas_Klein156" title="Contact me on Xing">
+                        <a class="typography--link--icon" href="//www.xing.com/profile/Andreas_Klein156" title="Contact me on Xing" data-track='{
+                        "category": "Footer",
+                        "action": "Xing Link clicked"
+                    }'>
                         @@include('_modules/_icons/_icons.html', { "name": "xing", "inline": true, "size": "", "attr": "iii-color=green" })
                         </a>
                     </li>
@@ -98,7 +122,10 @@
 
                 <ul class="list--inline">
                     <li>
-                        <a style="min-width: 180px; display: block;" class="typography--link--icon" href="//www.teamwrk.io/" title="Teamwrk.io Developer Duo">
+                        <a style="min-width: 180px; display: block;" class="typography--link--icon" href="//www.teamwrk.io/" title="Teamwrk.io Developer Duo" data-track='{
+                            "category": "Footer",
+                            "action": "Teamwrk.io Link clicked"
+                        }'>
                             <svg class="logo" viewBox="0 0 113 27" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" enable-background="new 0 0 152.5 63.5">
                                 <g id="logoText">
                                     <path d="M85.669,12.523l0,-6.656c0,0 3.87,-0.59 3.75,1.682c-0.089,1.708 -2.156,1.783 -3.375,1.783c-1.218,0 1.36,0 1.36,0l2.531,3.191" style="fill: none; stroke-width: 0.5px; stroke: rgb(255, 255, 255); stroke-dasharray: 21.7167px, 21.7167px; stroke-dashoffset: 0px;"></path>
@@ -155,7 +182,10 @@
                         </a>
                     </li>
                     <li>
-                        <a class="typography--link--icon" href="//www.nightlybuild.io/" title="Nightlybuild.io Conference">
+                        <a class="typography--link--icon" href="//www.nightlybuild.io/" title="Nightlybuild.io Conference" data-track='{
+                            "category": "Footer",
+                            "action": "Nightlybuild.io Link clicked"
+                        }'>
                             <img style="width: 3rem;" src="/assets/images/partner-friends/nightlybuild.svg" alt="Nightlybuild.io Conference">
                         </a>
                     </li>
@@ -165,7 +195,7 @@
     </section>
 
     <section id="copyright" class="layout__section" iii-bgcolor="black">
-        <p hill-text="small-3x center">&copy; 2016 Andreas Klein | <a class="typography--link" href="/legal.html">Legal</a> &bull; <a class="typography--link" href="/styleguide.html">Styleguide</a></p>
+        <p hill-text="small-3x center">&copy; 2016 Andreas Klein | <a class="typography--link" href="/legal.html" data-track='{"category": "Footer Copyright"}'>Legal</a> &bull; <a class="typography--link" href="/styleguide.html" data-track='{"category": "Footer Copyright"}'>Styleguide</a></p>
     </section>
 </footer>
 

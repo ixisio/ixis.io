@@ -1,6 +1,7 @@
 # ixis.io - CHANGELOG
 
 ## HEAD
+* Implement User Tracking using GA Event Tracking
 * Update Hillcss to v1.0.0 and fix breaking changes
 * Add new Client Logo (Remove)
 * Add new Icon for Downloads

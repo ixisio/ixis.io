@@ -1,18 +1,19 @@
 # My Personal Sandbox and Place to talk about Things
 
+[//ixis.io](https://ixis.io)
+
 ## Why a new release of my website?
-
-I created a full automated, linted, deploy'able and over-configured blog page with Node.js and in 2013. This time the main focus will be on **Simplicity**.
-Of course I'll use some tools for optimizing loading performance..and yeah, there will be a strategy to continuous deliver my site. But apart from that it's just plain simple HTML and CSS.
-
-## Dependencies
-* A browser
+* [I've written a note on my blog for that.](https://ixis.io/notes/redesign-january-2016)
 
 ## DevDependencies
 * Node.js
-* node-sass
-* Gulp.js
 
-## Gulp Tasks
-* `grunt dev` (default)
-* `grunt deploy`
+## Dev Setup
+* See [gulpfile.js](gulpfile.js) for task description.
+
+## Changelog
+* See the [CHANGELOG](CHANGELOG.md) for history infos
+
+---
+
+© Andreas Klein

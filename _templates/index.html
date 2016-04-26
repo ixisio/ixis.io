@@ -16,7 +16,10 @@
                          /assets/images/home/9776__960x1211.jpg 767w,
                          /assets/images/home/9776__480x606.jpg 480w">
 
-                <a href="#section-intro" class="layout__section__scroll-button" title="Scroll to next section" iii-color="black">
+                <a href="#section-intro" class="layout__section__scroll-button" title="Scroll to next section" iii-color="black" data-track='{
+                    "category": "Header",
+                    "action": "Arrow scroll button clicked"
+                }'>
                     @@include('_modules/_icons/_icons.html', { "name": "arrow-down", "inline": false, "size": "large", "attr": "" })
                 </a>
             </div>
@@ -29,9 +32,15 @@
                 <h1 class="typography--type-2">Hey, I'm Andreas Klein.<span iii-color="grey"> I create accessible and intuitive User Interfaces, help Teams to improve their Workflows and build large scale Frontend Architectures.</span>
                 </h1>
                 <p hill-text="center">
-                    <a href="#availability" class="typography--link--icon" hill-layout="space-right" iii-color="grey">
+                    <a href="#availability" class="typography--link--icon" hill-layout="space-right" iii-color="grey" data-track='{
+                            "category": "Startpage",
+                            "action": "Availability Anchor clicked"
+                        }'>
                         @@include('_modules/_icons/_icons.html', { "name": "calendar", "inline": true, "size": "small", "attr": "" })<span hill-layout="device-extra-small-0">Availability</span></a>
-                    <a href="mailto:andy@ixis.io?subject=Want to say Hello" class="button" iii-bgcolor="blue">Hire me</a>
+                    <a href="mailto:andy@ixis.io?subject=Want to say Hello" class="button" iii-bgcolor="blue" data-track='{
+                            "category": "Startpage",
+                            "action": "Hire Me Button clicked"
+                        }'>Hire me</a>
                 </p>
             </div>
         </section>
@@ -53,7 +62,7 @@
 
                         <footer class="testimonials__footer">
                             <cite class="testimonials__cite">
-                                <a href="http://www.kuehlhaus.com/" target="blank" class="typography--link">
+                                <a href="http://www.kuehlhaus.com/" target="blank" class="typography--link" data-track>
                                     <img src="/assets/images/testimonials/steffen-doell.jpg" alt="Steffen Döll" class="testimonial__image">
                                     <p class="testimonials__author">Steffen Döll</p>
                                     Kuehlhaus AG
@@ -76,7 +85,7 @@
 
                         <footer class="testimonials__footer">
                             <cite class="testimonials__cite">
-                                <a href="http://tomascaspers.de/" target="blank" class="typography--link">
+                                <a href="http://tomascaspers.de/" target="blank" class="typography--link" data-track>
                                     <img src="/assets/images/testimonials/tomas-caspers.jpg" alt="Tomas Caspers" class="testimonial__image">
                                     <p class="testimonials__author">Tomas Caspers</p>
                                     Accenture Digital Interactive
@@ -97,7 +106,7 @@
 
                         <footer class="testimonials__footer">
                             <cite class="testimonials__cite">
-                                <a href="http://drublic.de/" target="blank" class="typography--link">
+                                <a href="http://drublic.de/" target="blank" class="typography--link" data-track>
                                     <img src="/assets/images/testimonials/hans-reinl.jpg" alt="Hans Chr. Reinl" class="testimonial__image">
                                     <p class="testimonials__author">Hans Chr. Reinl</p>
                                     Freelance Frontend Developer
@@ -118,7 +127,7 @@
 
                         <footer class="testimonials__footer">
                             <cite class="testimonials__cite">
-                                <a href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" target="blank" class="typography--link">
+                                <a href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" target="blank" class="typography--link" data-track>
                                     <img src="/assets/images/testimonials/markus-besenfelder.jpg" alt="Markus Besenfelder" class="testimonial__image">
                                     <p class="testimonials__author">Markus Besenfelder</p>
                                     Stadt Hamburg
@@ -139,7 +148,7 @@
 
                         <footer class="testimonials__footer">
                             <cite class="testimonials__cite">
-                                <a href="https://helloanselm.com/" target="blank" class="typography--link">
+                                <a href="https://helloanselm.com/" target="blank" class="typography--link" data-track>
                                     <img src="/assets/images/testimonials/anselm-hannemann.jpg" alt="Anselm Hannemann" class="testimonial__image">
                                     <p class="testimonials__author">Anselm Hannemann</p>
                                     Freelance Frontend Developer
@@ -160,7 +169,7 @@
 
                         <footer class="testimonials__footer">
                             <cite class="testimonials__cite">
-                                <a href="http://nitzsche.info/" target="blank" class="typography--link">
+                                <a href="http://nitzsche.info/" target="blank" class="typography--link" data-track>
                                     <img src="/assets/images/testimonials/stefan-nitzsche.jpg" alt="Stefan Nitzsche" class="testimonial__image">
                                     <p class="testimonials__author">Stefan Nitzsche</p>
                                     Freelance Designer &amp; Consultant
@@ -179,37 +188,37 @@
 
             <ul class="list--inline clients">
                 <li class="clients__entry">
-                    <a href="http://vaillant-group.com" title="Vaillant Group" target="blank">
+                    <a href="http://vaillant-group.com" title="Vaillant Group" target="blank" data-track>
                         <img src="/assets/images/clients/vaillant-group.png" alt="Vaillant Group Logo">
                     </a>
                 </li>
                 <li class="clients__entry">
-                    <a href="https://www.billiger-mietwagen.de/" title="Billiger-Mietwagen.de" target="blank">
+                    <a href="https://www.billiger-mietwagen.de/" title="Billiger-Mietwagen.de" target="blank" data-track>
                         <img src="/assets/images/clients/billigermietwagen.png" alt="Billiger-Mietwagen.de Logo">
                     </a>
                 </li>
                 <li class="clients__entry">
-                    <a href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" title="Stadt Hamburg" target="blank">
+                    <a href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" title="Stadt Hamburg" target="blank" data-track>
                         <img src="/assets/images/clients/stadt-hamburg.png" alt="Stadt Hamburg Logo">
                     </a>
                 </li>
                 <li class="clients__entry">
-                    <a href="http://vaillant.com" title="Vaillant" target="blank">
+                    <a href="http://vaillant.com" title="Vaillant" target="blank" data-track>
                         <img src="/assets/images/clients/vaillant.png" alt="Vaillant Logo">
                     </a>
                 </li>
                 <li class="clients__entry">
-                    <a href="http://aktion-mensch.de" title="Aktion Mensch" target="blank">
+                    <a href="http://aktion-mensch.de" title="Aktion Mensch" target="blank" data-track>
                         <img src="/assets/images/clients/aktion-mensch.png" alt="Aktion Mensch Logo">
                     </a>
                 </li>
                 <li class="clients__entry">
-                    <a href="http://shareacamper.co.nz" title="Shareacamper" target="blank">
+                    <a href="http://shareacamper.co.nz" title="Shareacamper" target="blank" data-track>
                         <img src="/assets/images/clients/shareacamper.png" alt="Shareacamper Logo">
                     </a>
                 </li>
                 <li class="clients__entry">
-                    <a href="https://lightweight.info" title="Lightweight" target="blank">
+                    <a href="https://lightweight.info" title="Lightweight" target="blank" data-track>
                         <img src="/assets/images/clients/lightweight.png" alt="Lightweight Logo">
                     </a>
                 </li>
@@ -221,9 +230,15 @@
             Availability</h2>
 
             <p hill-text="center"><del>I'm available from 01.04.2016</del> I'm working on a project until <b>July 2016</b>.</p>
-            <p hill-text="center">You need me as a Consultant or want me to speak on your Event? Let's have <a class="typography--link" href="tel:+491738888987">Call</a> or meet me in Person:</p>
+            <p hill-text="center">You need me as a Consultant or want me to speak on your Event? Let's have <a class="typography--link" href="tel:+491738888987" data-track='{
+                        "category": "Startpage",
+                        "action": "Availability Phone Link clicked"
+                    }'>Call</a> or meet me in Person:</p>
             <address hill-text="center">
-                <a href="http://bit.ly/1MBSyBm" class="typography--link--icon" target="blank">
+                <a href="http://bit.ly/1MBSyBm" class="typography--link--icon" target="blank" data-track='{
+                    "category": "Startpage",
+                    "action": "Availability AdressLink clicked"
+                }'>
                 @@include('_modules/_icons/_icons.html', { "name": "location", "inline": true, "size": "small", "attr": "" })
                 50678 Cologne, Germany</a>
                 </address>
