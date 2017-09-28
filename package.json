@@ -18,7 +18,7 @@
     "url": "https://bitbucket.org/ixisio/ixis.io/issues"
   },
   "engines": {
-    "node": "5.5.0"
+    "node": "8.1.4"
   },
   "scripts": {
     "deploy": "node_modules/gulp/bin/gulp.js deploy",
