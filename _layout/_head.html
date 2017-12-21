@@ -5,7 +5,6 @@
 <link rel="dns-prefetch" href="https://ixis.io">
 <link rel="dns-prefetch" href="https://ixis-io.firebaseapp.com/">
 <link rel="dns-prefetch" href="//use.typekit.net">
-<link rel="stylesheet" href="/assets/css/main.css">
 <link rel="shortcut icon" href="/assets/images/general/favicon.png">
 
 <meta name="description" content="Freelance Agile Coach in Cologne, Germany">
@@ -22,3 +21,13 @@
 <link href="https://github.com/ixisio" rel="me">
 <link href="sms:+491738888987" rel="me">
 <link href="mailto:andy@ixis.io" rel="me">
+
+
+<!-- Load non-critical CSS async -->
+<link rel="preload"
+      href="/assets/css/main.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<!-- if javascript is disable, fallback via noscript -->
+<noscript><link rel="stylesheet" href="/assets/css/main.css"></noscript>
