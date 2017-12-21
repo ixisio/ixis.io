@@ -22,12 +22,13 @@
 <link href="sms:+491738888987" rel="me">
 <link href="mailto:andy@ixis.io" rel="me">
 
+@@include('_modules/_inlineScripts/_loadCSS.html')
 
 <!-- Load non-critical CSS async -->
-<link rel="preload"
-      href="/assets/css/main.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="/assets/css/non-crticial/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 <!-- if javascript is disable, fallback via noscript -->
-<noscript><link rel="stylesheet" href="/assets/css/main.css"></noscript>
+<noscript><link rel="stylesheet" href="/assets/css/non-crticial/main.css"></noscript>
+
+
+

@@ -21,7 +21,7 @@
     "node": "8.1.4"
   },
   "scripts": {
-    "deploy": "node_modules/gulp/bin/gulp.js deploy",
+    "deploy": "node_modules/gulp/bin/gulp.js deploy && node_modules/gulp/bin/gulp.js critical",
     "postinstall": "npm run deploy"
   },
   "dependencies": {
@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "browser-sync": "latest",
+    "critical": "^1.1.0",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-browserify": "latest",
