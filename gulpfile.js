@@ -45,7 +45,7 @@ gulp.task('sass', function () {
             cascade: false
         }))
         .on('error', errorLog)
-        .pipe(gulp.dest('./www/assets/css/non-crticial/'))
+        .pipe(gulp.dest('./www/assets/css/non-critical/'))
         .pipe(plugins.browserSync.stream());
 });
 
@@ -59,7 +59,7 @@ gulp.task('sass:deploy', function () {
         }))
         .pipe(gulp.dest('./www/assets/css/'))
         .pipe(plugins.cssmin())
-        .pipe(gulp.dest('./www/assets/css/non-crticial/'));
+        .pipe(gulp.dest('./www/assets/css/non-critical/'));
 });
 
 gulp.task('browserify', function() {
@@ -162,7 +162,7 @@ gulp.task('critical', function () {
             width: 768,
             height: 1350
         }],
-        css: ['www/assets/css/non-crticial/main.css'],
+        css: ['www/assets/css/non-critical/main.css'],
         extract: true
     });
 });
