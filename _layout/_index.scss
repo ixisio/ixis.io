@@ -1,3 +1,15 @@
+// Use border-box sizing for every element and pseudo-element
+// on the page.
+*,
+*:after,
+*:before  {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
 /**
  * max-width all elements
  * block elements.
@@ -70,6 +82,7 @@ address,
 }
 
 .layout__section__scroll-button {
+    display: none;
     position: absolute;
     bottom: 1.5rem;
     left: 50%;
@@ -82,6 +95,10 @@ address,
     &:hover {
         opacity: 0.75;
         transform: translate3d(0, 5px, 0);
+    }
+
+    @include hill-device-min('medium') {
+        display: block;
     }
 }
 
@@ -100,25 +117,5 @@ address,
     width: 6rem;
     display: block;
     z-index: 1;
-
-    // Logo positions differs form header image to header image
-    // See _logo.html
-    // .layout__logo {
-    //     top: 35%;
-    //     right: 30%;
-    // }
-
-    // @include hill-device-max('small') {
-    //     top: 30%;
-    //     right: 15%;
-    // }
-
-    // @include hill-device-min('medium') {
-    //     right: 35%;
-    // }
-
-    // @include hill-device-min('large') {
-    //     top: 42%;
-    // }
 }
 
