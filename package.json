@@ -31,7 +31,7 @@
   "dependencies": {
     "fastclick": "^1.0.6",
     "hillcss": "^1.0.0",
-    "jquery": "^2.1.4",
+    "jquery": "^3.4.0",
     "node-normalize-scss": "^1.0.3",
     "slick-carousel": "^1.5.8"
   },
