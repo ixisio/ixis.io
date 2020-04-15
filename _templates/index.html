@@ -234,6 +234,11 @@
                     </a>
                 </li>
                 <li class="clients__entry">
+                    <a href="https://www.hdi.de/" title="HDI Versicherung" target="blank" data-track>
+                        <img src="/assets/images/clients/hdi.png" alt="HDI Logo">
+                    </a>
+                </li>
+                <li class="clients__entry">
                     <a href="https://www.toom-baumarkt.de/" title="Toom Baumarkt" target="blank" data-track>
                         <img src="/assets/images/clients/toom.png" alt="Toom Logo">
                     </a>
@@ -263,7 +268,16 @@
                         <img src="/assets/images/clients/vaillant.png" alt="Vaillant Logo">
                     </a>
                 </li>
-
+                <li class="clients__entry">
+                    <a href="https://www.giz.de/" title="Gesellschaft für Internationale Zusammenarbeit (GIZ)" target="blank" data-track>
+                        <img src="/assets/images/clients/giz.png" alt="GIZ Logo">
+                    </a>
+                </li>
+                <li class="clients__entry">
+                    <a href="http://makuyuni.org" title="Makuyuni e.V." target="blank" data-track>
+                        <img src="/assets/images/clients/makuyuni.png" alt="Makuyuni Logo">
+                    </a>
+                </li>
                 <li class="clients__entry">
                     <a href="https://axa.de" title="AXA AG" target="blank" data-track>
                         <img src="/assets/images/clients/axa.png" alt="AXA AG Logo">
@@ -282,7 +296,7 @@
             <h2 class="typography--type-3 layout__section__headline" hill-text="center">
             Available ✓</h2>
 
-            <p hill-text="center"><b>Open to new opportunities, work and ideas as of beginning of the year 2020</b></p>
+            <p hill-text="center"><b>Open to new opportunities, work and ideas as of <u>01.05.2020</u></b></p>
             <p hill-text="center">You need me as a Consultant or want me to speak on your Event? Let's have a <a class="typography--link" href="tel:+491738888987" data-track='{
                         "category": "Startpage",
                         "action": "Availability Phone Link clicked"
@@ -291,12 +305,33 @@
                         "action": "Availability Email Link clicked"
                     }'>email</a> or meet me in Person:</p>
             <address hill-text="center">
-                <a href="https://goo.gl/2SJLj6" class="typography--link--icon" target="blank" data-track='{
+                <p>
+                    <a href="https://goo.gl/2SJLj6" class="typography--link--icon" target="blank" data-track='{
                     "category": "Startpage",
                     "action": "Availability AdressLink clicked"
                 }'>
                 @@include('_modules/_icons/_icons.html', { "name": "location", "inline": true, "size": "small", "attr": "" })
-                50678 Cologne, Germany</a>
+                50678 Cologne, Germany</a></p>
+
+                <p>
+                    <a href="mailto:andy@ixis.io"
+                    class="typography--link--icon"
+                    target="blank"
+                    hill-layout="space-right"
+                    data-track='{
+                    "category": "Startpage",
+                    "action": "Availability Email clicked"
+                }'>
+                @@include('_modules/_icons/_icons.html', { "name": "email", "inline": true, "size": "small", "attr": "" })
+                andy@ixis.io</a>
+
+                    <a href="tel:+491738888987" class="typography--link--icon" target="blank" data-track='{
+                    "category": "Startpage",
+                    "action": "Availability Phone clicked"
+                }'>
+                @@include('_modules/_icons/_icons.html', { "name": "phone", "inline": true, "size": "small", "attr": "" })
+                +49 173 8888987</a>
+                </p>
                 </address>
         </section>
     </main>
