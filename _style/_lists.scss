@@ -43,14 +43,17 @@
 
     li {
         display: inline-block;
-        margin-right: 0.25rem;
+        margin-right: 0.75rem;
+        margin-left: 10px;
     }
 
     li > span {
         background: get-color(green-light);
         border-radius: 5px;
-        padding: 0.25rem 0.5rem;
+        padding: 0.25rem 0;
         line-height: 1.5rem;
         color: get-color(white);
+        display: inline;
+        box-shadow: 10px 0 0 get-color(green-light), -10px 0 0 get-color(green-light);
     }
 }
