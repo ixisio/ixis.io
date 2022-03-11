@@ -10,7 +10,7 @@ var plugins = {
     cssmin: require('gulp-cssmin'),
     fileinclude: require('gulp-file-include'),
     rename: require('gulp-rename'),
-    sass: require('gulp-sass'),
+    sass: require('gulp-sass')(require('sass')),
     svgSprite: require('gulp-svg-sprite'),
     uglify: require('gulp-uglify'),
     critical: require('critical')

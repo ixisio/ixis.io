@@ -1,39 +1,39 @@
 {
   "name": "ixis.io",
-  "version": "0.1.0",
+  "version": "9.3.0",
   "author": "Andreas Klein",
-  "description": "My personal space to talk about things of the internet",
+  "description": "My personal website",
   "homepage": "http://ixis.io",
   "main": "main.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/ixisio/ixis.io.git"
+    "url": "https://github.com/ixisio/ixis.io/"
   },
   "keywords": [
     "blog",
     "website"
   ],
   "bugs": {
-    "url": "https://bitbucket.org/ixisio/ixis.io/issues"
-  },
-  "engines": {
-    "node": "12.10.0"
+    "url": "https://github.com/ixisio/ixis.io/issues"
   },
   "browserslist": [
-    "last 2 versions",
-    "ios 6"
+    "last 2 versions"
   ],
   "scripts": {
     "start": "gulp dev",
-    "deploy": "node_modules/gulp/bin/gulp.js deploy && node_modules/gulp/bin/gulp.js critical",
-    "postinstall": "npm run deploy"
+    "build": "node_modules/gulp/bin/gulp.js deploy && node_modules/gulp/bin/gulp.js critical",
+    "postinstall": "yarn run build",
+    "deploy": "yarn run build && firebase deploy --only hosting --project ixis-io"
+
   },
   "dependencies": {
     "fastclick": "^1.0.6",
+    "firebase-tools": "^10.2.2",
     "hillcss": "^1.0.0",
     "jquery": "^2.1.4",
     "node-normalize-scss": "^1.0.3",
+    "sass": "^1.49.9",
     "slick-carousel": "^1.5.8"
   },
   "devDependencies": {
@@ -45,7 +45,7 @@
     "gulp-cssmin": "latest",
     "gulp-file-include": "^0.13.7",
     "gulp-rename": "latest",
-    "gulp-sass": "latest",
+    "gulp-sass": "^5.1.0",
     "gulp-svg-sprite": "^1.2.13",
     "gulp-uglify": "latest"
   }

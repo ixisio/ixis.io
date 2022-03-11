@@ -14,6 +14,10 @@
 ## Changelog
 * See the [CHANGELOG](CHANGELOG.md) for history infos
 
+## Deploy:
+$ yarn deploy
+$ firebase deploy --only hosting --token "$FIREBASE_TOKEN" --project ixis-io
+
 ---
 
 © Andreas Klein

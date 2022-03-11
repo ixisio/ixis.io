@@ -2,6 +2,12 @@
 
 ## HEAD
 
+## v9.3.0 (11-02-2022)
+* Remove loadCSS polyfill
+* Update from npm to yarn
+* Update dependencies and fix problems with node-sass
+* Remove tracking scripts
+
 ## v9.2.0 (01-08-2016)
 * General textual and layouting changes
 * Implement User Tracking using GA Event Tracking
