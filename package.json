@@ -30,7 +30,7 @@
     "fastclick": "^1.0.6",
     "firebase-tools": "^10.2.2",
     "hillcss": "^1.0.0",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "node-normalize-scss": "^1.0.3",
     "sass": "^1.49.9",
     "slick-carousel": "^1.5.8"
