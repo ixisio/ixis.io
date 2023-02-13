@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    @@include('_layout/_head.html', { "title": "404" })
-</head>
-<body>
-    <main>
-        <section class="layout__section" hill-text="center">
-            <h1 class="typography--type-2">404</h1>
-            <h2 class="typography--type-3 color--grey">Dead Link</h2>
+    <head>
+        @@include('_layout/_head.html', { "title": "404" })
+    </head>
+    <body>
+        <main>
+            <section class="layout__section" hill-text="center">
+                <h1 class="typography--type-2">404</h1>
+                <h2 class="typography--type-3 color--grey">Dead Link</h2>
 
-            <p>OMG, could not find page! <a href="/" data-track='{
-                        "category": "404",
-                        "action": "Startpage Link Button clicked"
-                    }'> Go back to startpage</a></p>
-        </section>
-    </main>
+                <p>
+                    OMG, could not find page!
+                    <a href="/"> Go back to startpage</a>
+                </p>
+            </section>
+        </main>
 
-    @@include('_layout/_footer.html')
-</body>
+        @@include('_layout/_footer.html')
+    </body>
 </html>

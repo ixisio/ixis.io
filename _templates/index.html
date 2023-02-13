@@ -1,348 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    @@include('_layout/_head.html', { "title": "", "url": "https://ixis.io/" })
-</head>
-<body>
-    <header class="layout__header" iii-bgcolor="grey-light">
-        @@include('_layout/_logo.html', {"header": true, "color": "white", "linked": false})
+    <head>
+        @@include('_layout/_head.html', { "title": "", "url": "https://ixis.io/"
+        })
+    </head>
+    <body>
+        <header class="layout__header" iii-bgcolor="grey-light">
+            @@include('_layout/_logo.html', {"header": true, "color": "white",
+            "linked": false})
 
-        <div class="layout__header__image">
-            <div class="layout__header__image-wrapper">
-                <img src="/assets/images/home/9776__1200x800.jpg"
-                     srcset="/assets/images/home/9776__2000x1333.jpg 2000w,
-                         /assets/images/home/9776__1200x800.jpg 1200w,
-                         /assets/images/home/9776__768x512.jpg 768w">
+            <div class="layout__header__image">
+                <div class="layout__header__image-wrapper">
+                    <img
+                        src="/assets/images/home/9776__1200x800.jpg"
+                        srcset="
+                            /assets/images/home/9776__2000x1333.jpg 2000w,
+                            /assets/images/home/9776__1200x800.jpg  1200w,
+                            /assets/images/home/9776__768x512.jpg    768w
+                        "
+                    />
 
-                <a href="#section-intro" class="layout__section__scroll-button" title="Scroll to next section" iii-color="black"='{
-                    "category": "Header",
-                    "action": "Arrow scroll button clicked"
-                }'>
-                    @@include('_modules/_icons/_icons.html', { "name": "arrow-down", "inline": false, "size": "large", "attr": "" })
-                </a>
+                    <a
+                        href="#section-intro"
+                        class="layout__section__scroll-button"
+                        title="Scroll to next section"
+                        iii-color="black"
+                    >
+                        @@include('_modules/_icons/_icons.html', { "name":
+                        "arrow-down", "inline": false, "size": "large", "attr":
+                        "" })
+                    </a>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
-        <section id="section-intro">
-            <div class="layout__section">
-                <h1 class="typography--type-2" iii-color="grey"><span iii-color="black">Happiness. </span>Figuring out how to get Things done in larger Teams. <span iii-color="black">People.</span> Enable Conferences to share Experiences. <span iii-color="black">Agile Mindset.</span> <span iii-color="black">Accessibility.</span>
-                </h1>
-                <p hill-text="center">
-                    <a href="#availability" class="typography--link--icon" hill-layout="space-right" iii-color="grey"='{
-                            "category": "Startpage",
-                            "action": "Availability Anchor clicked"
-                        }'>
-                        @@include('_modules/_icons/_icons.html', { "name": "calendar", "inline": true, "size": "small", "attr": "" })<span hill-layout="device-small-0 device-extra-small-0">Availability</span></a>
-                    <a href="mailto:andy@ixis.io?subject=Say Hello" class="button" iii-bgcolor="blue" hill-layout="space-right"='{
-                            "category": "Startpage",
-                            "action": "Hire Me Button clicked"
-                        }'>Hire me</a>
-                    <a href="#skillset" class="typography--link--icon" hill-layout="space-right" iii-color="grey">
-                    <span hill-layout="device-small-0 device-extra-small-0">Skillset</span> @@include('_modules/_icons/_icons.html', { "name": "account", "inline": true, "size": "small", "attr": "" })</a>
-                </p>
-            </div>
-        </section>
-
-        <section id="testimonials" iii-bgcolor="blue">
-            <section class="layout__text-wrapper layout__space-top">
-                <h2 class="typography--type-3 layout__section__headline" hill-text="center">What my Friends and Customers say</h2>
+        <main>
+            <section id="section-intro">
+                <div class="layout__section">
+                    <h1 class="typography--type-2" iii-color="grey">
+                        <span iii-color="black">Happiness. </span>Figuring out
+                        how to get Things done in larger Teams.
+                        <span iii-color="black">People.</span> Enable
+                        Conferences to share Experiences.
+                        <span iii-color="black">Agile Mindset.</span>
+                        <span iii-color="black">Accessibility.</span>
+                    </h1>
+                    <p hill-text="center">
+                        <a
+                            href="#availability"
+                            class="typography--link--icon"
+                            hill-layout="space-right"
+                            iii-color="grey"
+                        >
+                            @@include('_modules/_icons/_icons.html', { "name":
+                            "calendar", "inline": true, "size": "small", "attr":
+                            "" })<span
+                                hill-layout="device-small-0 device-extra-small-0"
+                                >Availability</span
+                            ></a
+                        >
+                        <a
+                            href="mailto:andy@ixis.io?subject=Say Hello"
+                            class="button"
+                            iii-bgcolor="blue"
+                            hill-layout="space-right"
+                            >Hire me</a
+                        >
+                        <a
+                            href="#skillset"
+                            class="typography--link--icon"
+                            hill-layout="space-right"
+                            iii-color="grey"
+                        >
+                            <span
+                                hill-layout="device-small-0 device-extra-small-0"
+                                >Skillset</span
+                            >
+                            @@include('_modules/_icons/_icons.html', { "name":
+                            "account", "inline": true, "size": "small", "attr":
+                            "" })</a
+                        >
+                    </p>
+                </div>
             </section>
 
-            <div class="testimonials" data-slider="testimonials">
-                <section class="layout__section">
-                    <blockquote class="testimonials__entry">
-                        <div class="testimonials__quote">
-                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
-                        </div>
-                        <div class="testimonials__text">
-                             <p>Andy zeichnet sich als Scrum Master dadurch aus, dass er Konflikte im Team durch freundschaftliche Gespräche löst. Er bildet aus einer Gruppe einzelner Personen ein hoch motiviertes Team, dass mit Freude jeden Tag an seinen Zielen arbeitet.</p>
-                        </div>
-
-                        <footer class="testimonials__footer">
-                            <cite class="testimonials__cite">
-                                <a href="//www.vaillant-group.com" target="blank" class="typography--link">
-                                    <img src="/assets/images/testimonials/daniel-gambal.jpg" alt="Daniel Gambal" class="testimonial__image">
-                                    <p class="testimonials__author">Daniel Gambal</p>
-                                    Vaillant Group Business Services GmbH
-                                </a>
-                            </cite>
-                        </footer>
-                    </blockquote>
+            <section id="testimonials" iii-bgcolor="blue">
+                <section class="layout__text-wrapper layout__space-top">
+                    <h2
+                        class="typography--type-3 layout__section__headline"
+                        hill-text="center"
+                    >
+                        What my Friends and Customers say
+                    </h2>
                 </section>
 
-                <section class="layout__section">
-                    <blockquote class="testimonials__entry">
-                        <div class="testimonials__quote">
-                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
-                        </div>
-                        <div class="testimonials__text">
-                             <p>Andy habe ich als begnadeten Front-End Developer mit Leidenschaft für gute UX und durch-und-durch agilem Mindset kennengelernt. Er ist ein klasse Teamplayer, motiviert, willensstark, begeisternd und committed to success. Es war großartig mit ihm zu arbeiten, ein echter Gewinn fürs Projekt.</p>
-                        </div>
+                <div class="testimonials" data-slider="testimonials">
+                    <section class="layout__section">
+                        <blockquote class="testimonials__entry">
+                            <div class="testimonials__quote">
+                                @@include('_modules/_icons/_icons.html', {
+                                "name": "quote", "inline": "", "size": "",
+                                "attr": "" })
+                            </div>
+                            <div class="testimonials__text">
+                                <p>
+                                    Andy zeichnet sich als Scrum Master dadurch
+                                    aus, dass er Konflikte im Team durch
+                                    freundschaftliche Gespräche löst. Er bildet
+                                    aus einer Gruppe einzelner Personen ein hoch
+                                    motiviertes Team, dass mit Freude jeden Tag
+                                    an seinen Zielen arbeitet.
+                                </p>
+                            </div>
 
-                        <footer class="testimonials__footer">
-                            <cite class="testimonials__cite">
-                                <a href="http://www.d-group.com/" target="blank" class="typography--link">
-                                    <img src="/assets/images/testimonials/jan-stadelmann.jpg" alt="Jan Stadelmann" class="testimonial__image">
-                                    <p class="testimonials__author">Jan Stadelmann</p>
-                                    dgroup GmbH
-                                </a>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                </section>
+                            <footer class="testimonials__footer">
+                                <cite class="testimonials__cite">
+                                    <a
+                                        href="//www.vaillant-group.com"
+                                        target="blank"
+                                        class="typography--link"
+                                    >
+                                        <img
+                                            src="/assets/images/testimonials/daniel-gambal.jpg"
+                                            alt="Daniel Gambal"
+                                            class="testimonial__image"
+                                        />
+                                        <p class="testimonials__author">
+                                            Daniel Gambal
+                                        </p>
+                                        Vaillant Group Business Services GmbH
+                                    </a>
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </section>
 
+                    <section class="layout__section">
+                        <blockquote class="testimonials__entry">
+                            <div class="testimonials__quote">
+                                @@include('_modules/_icons/_icons.html', {
+                                "name": "quote", "inline": "", "size": "",
+                                "attr": "" })
+                            </div>
+                            <div class="testimonials__text">
+                                <p>
+                                    Andy habe ich als begnadeten Front-End
+                                    Developer mit Leidenschaft für gute UX und
+                                    durch-und-durch agilem Mindset
+                                    kennengelernt. Er ist ein klasse Teamplayer,
+                                    motiviert, willensstark, begeisternd und
+                                    committed to success. Es war großartig mit
+                                    ihm zu arbeiten, ein echter Gewinn fürs
+                                    Projekt.
+                                </p>
+                            </div>
 
-                <section class="layout__section">
-                    <blockquote class="testimonials__entry">
-                        <div class="testimonials__quote">
-                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
-                        </div>
-                        <div class="testimonials__text">
-                             <p>Competent accessibility consulting packaged in an exciting and entertaining workshop</p>
-                        </div>
+                            <footer class="testimonials__footer">
+                                <cite class="testimonials__cite">
+                                    <a
+                                        href="http://www.d-group.com/"
+                                        target="blank"
+                                        class="typography--link"
+                                    >
+                                        <img
+                                            src="/assets/images/testimonials/jan-stadelmann.jpg"
+                                            alt="Jan Stadelmann"
+                                            class="testimonial__image"
+                                        />
+                                        <p class="testimonials__author">
+                                            Jan Stadelmann
+                                        </p>
+                                        dgroup GmbH
+                                    </a>
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </section>
 
-                        <footer class="testimonials__footer">
-                            <cite class="testimonials__cite">
-                                <a href="http://www.kuehlhaus.com/" target="blank" class="typography--link">
-                                    <img src="/assets/images/testimonials/steffen-doell.jpg" alt="Steffen Döll" class="testimonial__image">
-                                    <p class="testimonials__author">Steffen Döll</p>
-                                    Kuehlhaus AG
-                                </a>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                </section>
+                    <section class="layout__section">
+                        <blockquote class="testimonials__entry">
+                            <div class="testimonials__quote">
+                                @@include('_modules/_icons/_icons.html', {
+                                "name": "quote", "inline": "", "size": "",
+                                "attr": "" })
+                            </div>
+                            <div class="testimonials__text">
+                                <p>
+                                    Competent accessibility consulting packaged
+                                    in an exciting and entertaining workshop
+                                </p>
+                            </div>
 
-                <section class="layout__section">
-                    <blockquote class="testimonials__entry">
-                        <div class="testimonials__quote">
-                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
-                        </div>
-                        <div class="testimonials__text">
-                             <p>Andy ist gut!<br>
-                             Subjekt, Prädikat, Objekt.<br>
-                             Kürzer geht nicht :)</p>
-                        </div>
+                            <footer class="testimonials__footer">
+                                <cite class="testimonials__cite">
+                                    <a
+                                        href="http://www.kuehlhaus.com/"
+                                        target="blank"
+                                        class="typography--link"
+                                    >
+                                        <img
+                                            src="/assets/images/testimonials/steffen-doell.jpg"
+                                            alt="Steffen Döll"
+                                            class="testimonial__image"
+                                        />
+                                        <p class="testimonials__author">
+                                            Steffen Döll
+                                        </p>
+                                        Kuehlhaus AG
+                                    </a>
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </section>
 
-                        <footer class="testimonials__footer">
-                            <cite class="testimonials__cite">
-                                <a href="http://tomascaspers.de/" target="blank" class="typography--link">
-                                    <img src="/assets/images/testimonials/tomas-caspers.jpg" alt="Tomas Caspers" class="testimonial__image">
-                                    <p class="testimonials__author">Tomas Caspers</p>
-                                    Accenture Digital Interactive
-                                </a>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                </section>
+                    <section class="layout__section">
+                        <blockquote class="testimonials__entry">
+                            <div class="testimonials__quote">
+                                @@include('_modules/_icons/_icons.html', {
+                                "name": "quote", "inline": "", "size": "",
+                                "attr": "" })
+                            </div>
+                            <div class="testimonials__text">
+                                <p>
+                                    Andy ist gut!<br />
+                                    Subjekt, Prädikat, Objekt.<br />
+                                    Kürzer geht nicht :)
+                                </p>
+                            </div>
 
-                <section class="layout__section">
-                    <blockquote class="testimonials__entry">
-                        <div class="testimonials__quote">
-                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
-                        </div>
-                        <div class="testimonials__text">
-                             <p>Andy is a very knowledgable developer with a passion for front-end architecture and user-experience. Working with him is always exciting: he engineers elegant and practical solutions in time and comes up with explicit new ideas while keeping the goals of the project in consideration.</p>
-                        </div>
+                            <footer class="testimonials__footer">
+                                <cite class="testimonials__cite">
+                                    <a
+                                        href="http://tomascaspers.de/"
+                                        target="blank"
+                                        class="typography--link"
+                                    >
+                                        <img
+                                            src="/assets/images/testimonials/tomas-caspers.jpg"
+                                            alt="Tomas Caspers"
+                                            class="testimonial__image"
+                                        />
+                                        <p class="testimonials__author">
+                                            Tomas Caspers
+                                        </p>
+                                        Accenture Digital Interactive
+                                    </a>
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </section>
 
-                        <footer class="testimonials__footer">
-                            <cite class="testimonials__cite">
-                                <a href="http://drublic.de/" target="blank" class="typography--link">
-                                    <img src="/assets/images/testimonials/hans-reinl.jpg" alt="Hans Chr. Reinl" class="testimonial__image">
-                                    <p class="testimonials__author">Hans Chr. Reinl</p>
-                                    Freelance Frontend Developer
-                                </a>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                </section>
+                    <section class="layout__section">
+                        <blockquote class="testimonials__entry">
+                            <div class="testimonials__quote">
+                                @@include('_modules/_icons/_icons.html', {
+                                "name": "quote", "inline": "", "size": "",
+                                "attr": "" })
+                            </div>
+                            <div class="testimonials__text">
+                                <p>
+                                    Andy is a very knowledgable developer with a
+                                    passion for front-end architecture and
+                                    user-experience. Working with him is always
+                                    exciting: he engineers elegant and practical
+                                    solutions in time and comes up with explicit
+                                    new ideas while keeping the goals of the
+                                    project in consideration.
+                                </p>
+                            </div>
 
-                <section class="layout__section">
-                    <blockquote class="testimonials__entry">
-                        <div class="testimonials__quote">
-                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
-                        </div>
-                        <div class="testimonials__text">
-                             <p>We searched for some custom-tailored consulting for our project and what we got was not just that. Andreas also delivered enthusiasm and some ‘magic tools’ which really boosted the project. Couldn't ask for more!</p>
-                        </div>
+                            <footer class="testimonials__footer">
+                                <cite class="testimonials__cite">
+                                    <a
+                                        href="http://drublic.de/"
+                                        target="blank"
+                                        class="typography--link"
+                                    >
+                                        <img
+                                            src="/assets/images/testimonials/hans-reinl.jpg"
+                                            alt="Hans Chr. Reinl"
+                                            class="testimonial__image"
+                                        />
+                                        <p class="testimonials__author">
+                                            Hans Chr. Reinl
+                                        </p>
+                                        Freelance Frontend Developer
+                                    </a>
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </section>
 
-                        <footer class="testimonials__footer">
-                            <cite class="testimonials__cite">
-                                <a href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" target="blank" class="typography--link">
-                                    <img src="/assets/images/testimonials/markus-besenfelder.jpg" alt="Markus Besenfelder" class="testimonial__image">
-                                    <p class="testimonials__author">Markus Besenfelder</p>
-                                    Stadt Hamburg
-                                </a>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                </section>
+                    <section class="layout__section">
+                        <blockquote class="testimonials__entry">
+                            <div class="testimonials__quote">
+                                @@include('_modules/_icons/_icons.html', {
+                                "name": "quote", "inline": "", "size": "",
+                                "attr": "" })
+                            </div>
+                            <div class="testimonials__text">
+                                <p>
+                                    We searched for some custom-tailored
+                                    consulting for our project and what we got
+                                    was not just that. Andreas also delivered
+                                    enthusiasm and some ‘magic tools’ which
+                                    really boosted the project. Couldn't ask for
+                                    more!
+                                </p>
+                            </div>
 
-                <section class="layout__section">
-                    <blockquote class="testimonials__entry">
-                        <div class="testimonials__quote">
-                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
-                        </div>
-                        <div class="testimonials__text">
-                             <p>Andreas is an incredibly helpful team-player I had the pleasure to work with. He massively impacted the code quality by applying his thoughts and practice to it while adapting the team’s habits.</p>
-                        </div>
+                            <footer class="testimonials__footer">
+                                <cite class="testimonials__cite">
+                                    <a
+                                        href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/"
+                                        target="blank"
+                                        class="typography--link"
+                                    >
+                                        <img
+                                            src="/assets/images/testimonials/markus-besenfelder.jpg"
+                                            alt="Markus Besenfelder"
+                                            class="testimonial__image"
+                                        />
+                                        <p class="testimonials__author">
+                                            Markus Besenfelder
+                                        </p>
+                                        Stadt Hamburg
+                                    </a>
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </section>
 
-                        <footer class="testimonials__footer">
-                            <cite class="testimonials__cite">
-                                <a href="https://helloanselm.com/" target="blank" class="typography--link">
-                                    <img src="/assets/images/testimonials/anselm-hannemann.jpg" alt="Anselm Hannemann" class="testimonial__image">
-                                    <p class="testimonials__author">Anselm Hannemann</p>
-                                    Freelance Frontend Developer
-                                </a>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                </section>
+                    <section class="layout__section">
+                        <blockquote class="testimonials__entry">
+                            <div class="testimonials__quote">
+                                @@include('_modules/_icons/_icons.html', {
+                                "name": "quote", "inline": "", "size": "",
+                                "attr": "" })
+                            </div>
+                            <div class="testimonials__text">
+                                <p>
+                                    Andreas is an incredibly helpful team-player
+                                    I had the pleasure to work with. He
+                                    massively impacted the code quality by
+                                    applying his thoughts and practice to it
+                                    while adapting the team’s habits.
+                                </p>
+                            </div>
 
-                <section class="layout__section">
-                    <blockquote class="testimonials__entry">
-                        <div class="testimonials__quote">
-                            @@include('_modules/_icons/_icons.html', { "name": "quote", "inline": "", "size": "", "attr": "" })
-                        </div>
-                        <div class="testimonials__text">
-                             <p>Andreas ist fokussiert, engagiert und diszipliniert. Sein Wissensdurst und sein Hunger nach Weiterentwicklung, kombiniert mit dem Willen, im Team wirklich Großartiges zu erreichen, machen aus ihm den perfekten Mitstreiter, Diskussionspartner und Kollegen. Uneingeschränkt empfehlenswert.</p>
-                        </div>
+                            <footer class="testimonials__footer">
+                                <cite class="testimonials__cite">
+                                    <a
+                                        href="https://helloanselm.com/"
+                                        target="blank"
+                                        class="typography--link"
+                                    >
+                                        <img
+                                            src="/assets/images/testimonials/anselm-hannemann.jpg"
+                                            alt="Anselm Hannemann"
+                                            class="testimonial__image"
+                                        />
+                                        <p class="testimonials__author">
+                                            Anselm Hannemann
+                                        </p>
+                                        Freelance Frontend Developer
+                                    </a>
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </section>
 
-                        <footer class="testimonials__footer">
-                            <cite class="testimonials__cite">
-                                <a href="http://nitzsche.info/" target="blank" class="typography--link">
-                                    <img src="/assets/images/testimonials/stefan-nitzsche.jpg" alt="Stefan Nitzsche" class="testimonial__image">
-                                    <p class="testimonials__author">Stefan Nitzsche</p>
-                                    Freelance Designer &amp; Consultant
-                                </a>
-                            </cite>
-                        </footer>
-                    </blockquote>
-                </section>
-            </div>
-        </section>
+                    <section class="layout__section">
+                        <blockquote class="testimonials__entry">
+                            <div class="testimonials__quote">
+                                @@include('_modules/_icons/_icons.html', {
+                                "name": "quote", "inline": "", "size": "",
+                                "attr": "" })
+                            </div>
+                            <div class="testimonials__text">
+                                <p>
+                                    Andreas ist fokussiert, engagiert und
+                                    diszipliniert. Sein Wissensdurst und sein
+                                    Hunger nach Weiterentwicklung, kombiniert
+                                    mit dem Willen, im Team wirklich Großartiges
+                                    zu erreichen, machen aus ihm den perfekten
+                                    Mitstreiter, Diskussionspartner und
+                                    Kollegen. Uneingeschränkt empfehlenswert.
+                                </p>
+                            </div>
 
-        <section id="clients" class="layout__section" hill-text="center">
+                            <footer class="testimonials__footer">
+                                <cite class="testimonials__cite">
+                                    <a
+                                        href="http://nitzsche.info/"
+                                        target="blank"
+                                        class="typography--link"
+                                    >
+                                        <img
+                                            src="/assets/images/testimonials/stefan-nitzsche.jpg"
+                                            alt="Stefan Nitzsche"
+                                            class="testimonial__image"
+                                        />
+                                        <p class="testimonials__author">
+                                            Stefan Nitzsche
+                                        </p>
+                                        Freelance Designer &amp; Consultant
+                                    </a>
+                                </cite>
+                            </footer>
+                        </blockquote>
+                    </section>
+                </div>
+            </section>
 
-            <h2 class="typography--type-3 layout__section__headline">
-            My Clients</h2>
+            <section id="clients" class="layout__section" hill-text="center">
+                <h2 class="typography--type-3 layout__section__headline">
+                    My Clients
+                </h2>
 
-            <ul class="list--inline clients">
-                <li class="clients__entry">
-                    <a href="http://aktion-mensch.de" title="Aktion Mensch" target="blank">
-                        <img src="/assets/images/clients/aktion-mensch.png" alt="Aktion Mensch Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="https://www.vorwerk.de/" title="Vorwerk" target="blank">
-                        <img src="/assets/images/clients/vorwerk.png" alt="Vorwerk Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="https://www.hdi.de/" title="HDI Versicherung" target="blank">
-                        <img src="/assets/images/clients/hdi.png" alt="HDI Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="https://www.toom-baumarkt.de/" title="Toom Baumarkt" target="blank">
-                        <img src="/assets/images/clients/toom.png" alt="Toom Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="http://vaillant-group.com" title="Vaillant Group" target="blank">
-                        <img src="/assets/images/clients/vaillant-group.png" alt="Vaillant Group Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="https://www.billiger-mietwagen.de/" title="Billiger-Mietwagen.de" target="blank">
-                        <img src="/assets/images/clients/billigermietwagen.png" alt="Billiger-Mietwagen.de Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="http://www.rewe-group.com/" title="Rewe Group" target="blank">
-                        <img src="/assets/images/clients/rewe-group.png" alt="Rewe Group Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/" title="Stadt Hamburg" target="blank">
-                        <img src="/assets/images/clients/stadt-hamburg.png" alt="Stadt Hamburg Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="http://vaillant.com" title="Vaillant" target="blank">
-                        <img src="/assets/images/clients/vaillant.png" alt="Vaillant Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="https://www.giz.de/" title="Gesellschaft für Internationale Zusammenarbeit (GIZ)" target="blank">
-                        <img src="/assets/images/clients/giz.png" alt="GIZ Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="http://makuyuni.org" title="Makuyuni e.V." target="blank">
-                        <img src="/assets/images/clients/makuyuni.png" alt="Makuyuni Logo">
-                    </a>
-                </li>
-                <li class="clients__entry">
-                    <a href="https://axa.de" title="AXA AG" target="blank">
-                        <img src="/assets/images/clients/axa.png" alt="AXA AG Logo">
-                    </a>
-                </li>
+                <ul class="list--inline clients">
+                    <li class="clients__entry">
+                        <a
+                            href="http://aktion-mensch.de"
+                            title="Aktion Mensch"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/aktion-mensch.png"
+                                alt="Aktion Mensch Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="https://www.vorwerk.de/"
+                            title="Vorwerk"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/vorwerk.png"
+                                alt="Vorwerk Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="https://www.hdi.de/"
+                            title="HDI Versicherung"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/hdi.png"
+                                alt="HDI Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="https://www.toom-baumarkt.de/"
+                            title="Toom Baumarkt"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/toom.png"
+                                alt="Toom Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="http://vaillant-group.com"
+                            title="Vaillant Group"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/vaillant-group.png"
+                                alt="Vaillant Group Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="https://www.billiger-mietwagen.de/"
+                            title="Billiger-Mietwagen.de"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/billigermietwagen.png"
+                                alt="Billiger-Mietwagen.de Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="http://www.rewe-group.com/"
+                            title="Rewe Group"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/rewe-group.png"
+                                alt="Rewe Group Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="http://www.hamburg.de/bsw/landesbetrieb-geoinformation-und-vermessung/"
+                            title="Stadt Hamburg"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/stadt-hamburg.png"
+                                alt="Stadt Hamburg Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="http://vaillant.com"
+                            title="Vaillant"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/vaillant.png"
+                                alt="Vaillant Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="https://www.vivaconagua.org/"
+                            title="Viva con Agua de Sankt Pauli e.V."
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/vca.png"
+                                alt="Viva con Agua de Sankt Pauli e.V. Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="https://www.giz.de/"
+                            title="Gesellschaft für Internationale Zusammenarbeit (GIZ)"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/giz.png"
+                                alt="GIZ Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a
+                            href="http://makuyuni.org"
+                            title="Makuyuni e.V."
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/makuyuni.png"
+                                alt="Makuyuni Logo"
+                            />
+                        </a>
+                    </li>
+                    <li class="clients__entry">
+                        <a href="https://axa.de" title="AXA AG" target="blank">
+                            <img
+                                src="/assets/images/clients/axa.png"
+                                alt="AXA AG Logo"
+                            />
+                        </a>
+                    </li>
 
-                <li class="clients__entry">
-                    <a href="http://shareacamper.co.nz" title="Shareacamper" target="blank">
-                        <img src="/assets/images/clients/shareacamper.png" alt="Shareacamper Logo">
-                    </a>
-                </li>
-            </ul>
-        </section>
+                    <li class="clients__entry">
+                        <a
+                            href="http://shareacamper.co.nz"
+                            title="Shareacamper"
+                            target="blank"
+                        >
+                            <img
+                                src="/assets/images/clients/shareacamper.png"
+                                alt="Shareacamper Logo"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </section>
 
-        <section id="availability" class="layout__section" iii-bgcolor="green-light">
-            <h2 class="typography--type-3 layout__section__headline" hill-text="center">
-            Available ✓</h2>
+            <section
+                id="availability"
+                class="layout__section"
+                iii-bgcolor="green-light"
+            >
+                <h2
+                    class="typography--type-3 layout__section__headline"
+                    hill-text="center"
+                >
+                    Available ✓
+                </h2>
 
-            <p hill-text="center"><b>Open to new opportunities, work and ideas as of <u>01.06.2022</u></b></p>
-            <p hill-text="center">You need me as a Consultant or want me to speak on your Event? Let's have a <a class="typography--link" href="tel:+491738888987"='{
-                        "category": "Startpage",
-                        "action": "Availability Phone Link clicked"
-                    }'>call</a>, send me an <a class="typography--link" href="mailto:andy@ixis.io"='{
-                        "category": "Startpage",
-                        "action": "Availability Email Link clicked"
-                    }'>email</a> or meet me in Person:</p>
-            <address hill-text="center">
-                <p>
-                    <a href="https://goo.gl/2SJLj6" class="typography--link--icon" target="blank"='{
-                    "category": "Startpage",
-                    "action": "Availability AdressLink clicked"
-                }'>
-                @@include('_modules/_icons/_icons.html', { "name": "location", "inline": true, "size": "small", "attr": "" })
-                50678 Cologne, Germany</a></p>
-
-                <p>
-                    <a href="mailto:andy@ixis.io"
-                    class="typography--link--icon"
-                    target="blank"
-                    hill-layout="space-right"
-                ='{
-                    "category": "Startpage",
-                    "action": "Availability Email clicked"
-                }'>
-                @@include('_modules/_icons/_icons.html', { "name": "email", "inline": true, "size": "small", "attr": "" })
-                andy@ixis.io</a>
-
-                    <a href="tel:+491738888987" class="typography--link--icon" target="blank"='{
-                    "category": "Startpage",
-                    "action": "Availability Phone clicked"
-                }'>
-                @@include('_modules/_icons/_icons.html', { "name": "phone", "inline": true, "size": "small", "attr": "" })
-                +49 173 8888987</a>
+                <p hill-text="center">
+                    <b>Open to new opportunities, work and ideas</b>
                 </p>
-                </address>
-        </section>
-    </main>
+                <p hill-text="center">
+                    You need me as a Consultant or want me to speak on your
+                    Event? Let's have a
+                    <a class="typography--link" href="tel:+491738888987">call</a
+                    >, send me an
+                    <a class="typography--link" href="mailto:andy@ixis.io"
+                        >email</a
+                    >
+                    or meet me in Person:
+                </p>
+                <address hill-text="center">
+                    <p>
+                        <a
+                            href="https://goo.gl/2SJLj6"
+                            class="typography--link--icon"
+                            target="blank"
+                        >
+                            @@include('_modules/_icons/_icons.html', { "name":
+                            "location", "inline": true, "size": "small", "attr":
+                            "" }) 50678 Cologne, Germany</a
+                        >
+                    </p>
 
-    @@include('_layout/_footer.html')
-</body>
+                    <p>
+                        <a
+                            href="mailto:andy@ixis.io"
+                            class="typography--link--icon"
+                            target="blank"
+                            hill-layout="space-right"
+                        >
+                            @@include('_modules/_icons/_icons.html', { "name":
+                            "email", "inline": true, "size": "small", "attr": ""
+                            }) andy@ixis.io</a
+                        >
+
+                        <a
+                            href="tel:+491738888987"
+                            class="typography--link--icon"
+                            target="blank"
+                        >
+                            @@include('_modules/_icons/_icons.html', { "name":
+                            "phone", "inline": true, "size": "small", "attr": ""
+                            }) +49 173 8888987</a
+                        >
+                    </p>
+                </address>
+            </section>
+        </main>
+
+        @@include('_layout/_footer.html')
+    </body>
 </html>
